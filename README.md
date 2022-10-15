@@ -1,2 +1,2 @@
-# Morgana Core Web Framework!
+# Morgana Core Web Framework
 Future documents are coming.
