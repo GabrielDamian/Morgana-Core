@@ -1,15 +1,12 @@
 import React,{useState, useEffect} from 'react';
+import './coreStyle.css';
 
 export default function CoreModule({ceva})
 {
-    useEffect(()=>{
-        console.log("intro_1 init")
-    },[])
-    
     return (
-        <p>
+        <div className='layers_intro_1-container'>
             core module layers module 1
             ceva: {ceva}
-        </p>
+        </div>
     )
 }
