@@ -1,0 +1,136 @@
+.footer_model_1
+{
+    display: flex;
+}
+.footer_model_1-left
+{
+    width: 50%;
+    padding: 40px;
+}
+.footer_model_1-left-top
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer_model_1-left-top-intro
+{
+    font-size: 1.1rem;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.footer_model_1-left-top img 
+{
+    height: 200px;
+    object-fit: contain;
+    margin-top: 30px;
+}
+.footer_model_1-left-top-desc
+{
+    font-size: 1.2rem;  
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+
+}
+.footer_model_1-left-bot
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.footer_model_1-left-bot button
+{
+    padding: 10px 20px;
+    font-size: 2.3rem;
+}
+
+.footer_model_1-right
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_model_1-right-top
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 3rem;
+}
+.footer_model_1-right-separator
+{
+    width: 200px;
+    height: 1px;
+    background-color: #806843;
+}
+
+.footer_model_1-right-bot
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.footer_model_1-right-bot-col
+{
+    width: 48%;
+    height: 100%;
+}
+.footer_model_1-right-bot-col-item
+{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_model_1-right-bot-col-item-icon
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_model_1-right-bot-col-item-icon img 
+{
+    height: 70px;
+    object-fit: contain;
+    padding: 10px 0px;
+}
+.footer_model_1-right-bot-col-item-icon span 
+{
+    padding: 15px 0px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer_model_1-right-bot-col-item-text
+{
+    font-size: 1.5rem;
+    padding: 20px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer_model_1-right-bot-separator
+{
+    width: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_model_1-right-bot-separator-content
+{
+    width: 1px;
+    height: 90%;
+    background-color: #806843;
+    
+}
+

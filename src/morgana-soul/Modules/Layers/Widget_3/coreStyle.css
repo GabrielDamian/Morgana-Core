@@ -1,0 +1,33 @@
+.layers_widget_3-container
+{
+    padding: 30px 50px;
+}
+.layers_widget_3-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: #a68554;
+    color: #fff;
+    /* margin: 15px; */
+    font-size: 4em;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* override carouse styles  */
+.kXteup:hover:enabled, .kXteup:focus:enabled
+{
+    background-color: #a68554 !important;
+}
+.cVXxbE
+{
+    background-color: #ffe8c6 !important;
+    box-shadow: 0 0 1px 3px #a68554 !important;
+}
+

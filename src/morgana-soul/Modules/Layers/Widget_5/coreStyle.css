@@ -1,0 +1,20 @@
+.layers_widget_5-container
+{
+    padding: 50px;
+}
+.layers_widget_5-container-header
+{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+.layers_widget_5-container-header span 
+{
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 170px;
+}

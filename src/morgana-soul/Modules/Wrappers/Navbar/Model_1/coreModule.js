@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import './coreStyle.css';
 import MapPinIconDefault from './res/maps-and-flags.svg';
 import PhoneIconDefault from './res/phone-call.svg';
-import LogoTemplate from './res/logo-template.svg';
+import LogoTemplate from './res/logo-template.png';
 
 import hexToCSSFilters from '../../../../core/utils/hexToCSSFilters';
 import {
@@ -19,10 +19,12 @@ export default function CoreModule({
     iconsColor,
 
     primaryFont,
-    primaryFontColor,
-    
     secondaryFont,
-    secondaryFontColor,
+    fontColor,
+    fontColorOnScroll,
+
+    // to delete
+    // 
 
     bgFirstColor,
     bgColor,
@@ -36,13 +38,11 @@ export default function CoreModule({
     logoHeight,
 })
 {
-    useEffect(()=>{
-        console.log("primaryFontColor:", primaryFontColor)
-
-    },[])
     const [bgColorState, setBgColorState] = useState(bgFirstColor);
-
-   
+    useEffect(()=>{
+        console.log("bgColorState update:", bgColorState)
+        console.log("check:",bgFirstColor, bgColor )
+    },[bgColorState])
 
     useEffect(()=>{
         let checkTrigger = ()=>{
@@ -50,12 +50,10 @@ export default function CoreModule({
             
             if(window.scrollY > trigger)
             {
-                console.log("case 1")
                 setBgColorState(bgColor)
             }
             else if(window.scrollY < trigger) 
             {
-                console.log("case 2")
                 setBgColorState(bgFirstColor)
             }
         }
@@ -94,17 +92,22 @@ export default function CoreModule({
 
     let internStyle={
         btnLink:{
-            color: primaryFontColor?primaryFontColor:'black'
+            color: fontColor?(bgColorState==bgFirstColor ? fontColor:fontColorOnScroll):'white'
         },
         btnMobileLink:{
-            color: primaryFontColor?primaryFontColor:'black',
+            color: fontColor?(bgColorState==bgFirstColor ? fontColor:fontColorOnScroll):'white',
             transition:'all 0.5s ease',
             width: burgetActive ?'auto':'0px',
             padding:burgetActive ? '20px' :'0px',
             fontSize:'2.5rem',
             textDecoration: 'none',
             overflow:'hidden'
+        },
+        phoneLocationSpan:{
+            fontFamily: secondaryFont?secondaryFont:'none',
+            color: fontColor?(bgColorState==bgFirstColor ? fontColor:fontColorOnScroll):'white'
         }
+
     }
     return(
         <>
@@ -118,13 +121,13 @@ export default function CoreModule({
                 }}>
             <div className='navbar_model_1-container-location-and-phone'>
                 <img src={mapIcon ? mapIcon : MapPinIconDefault} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}} />
-                <span style={{fontFamily: secondaryFont?secondaryFont:'none',color: secondaryFontColor?secondaryFontColor:'red'}} >{locationName}</span>
+                <span style={internStyle.phoneLocationSpan} >{locationName}</span>
             </div>
             <div className='navbar_model_1-container-center'
-                style={{
+                 style={{
                     fontFamily: primaryFont ? primaryFont:'none',
-                }}
-            >
+                 }}
+             >
                 <div className={`navbar_model_1-container-center-link-container ${decideBeforeAnimation()}`}>
                     <Link to={links[0].ref} style={internStyle.btnLink}>{links[0].name}</Link>
                     <Link to={links[1].ref} style={internStyle.btnLink}>{links[1].name}</Link>
@@ -139,7 +142,7 @@ export default function CoreModule({
             </div>
             <div className='navbar_model_1-container-location-and-phone'>
                 <img src={phoneIcon ? phoneIcon : PhoneIconDefault} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}} />
-                <span style={{fontFamily: secondaryFont?secondaryFont:'none',color: secondaryFontColor?secondaryFontColor:'red'}} >{phoneName}</span>
+                <span style={internStyle.phoneLocationSpan} >{phoneName}</span>
             </div>
         </div>
         <div className='navbar_model_1-container-mobile' style={{backgroundColor: bgColorState}}>
@@ -171,14 +174,11 @@ export default function CoreModule({
                 </div>
                 <div className='navbar_model_1-container-mobile-absolute-container-bot'>
                     <img src={phoneIcon ? phoneIcon : PhoneIconDefault} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}} />
-                    <span style={{fontFamily: secondaryFont?secondaryFont:'none',color: secondaryFontColor?secondaryFontColor:'red'}} >{phoneName}</span>
+                    <span style={internStyle.phoneLocationSpan} >{phoneName}</span>
                 </div>
                 
                 
             </div>
-        </div>
-        <div style={{height:'200vh', backgroundColor: 'pink', overflow:'hidden'}}>
-
         </div>
         </>
         

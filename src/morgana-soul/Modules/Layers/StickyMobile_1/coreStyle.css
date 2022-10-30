@@ -1,0 +1,127 @@
+.layers_stickymobile_1-container
+{
+    position: fixed;
+    right: 0;
+    top: 60%;
+    z-index: 1;
+}
+
+.layers_stickymobile_1-container-phone
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.layers_stickymobile_1-container-phone img
+{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layers_stickymobile_1-container-social
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+    height: 80px;
+    position: relative;
+    border: 1px solid #a48454;
+    background-color: white;
+    animation: out 1s;
+    animation-fill-mode: forwards;
+}
+.layers_stickymobile_1-container-social:hover
+{
+    animation: in 1s;
+    animation-fill-mode: forwards;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 1s ease;
+}
+ @keyframes in {
+    from   { 
+        width: 100px;
+    }
+    to { 
+        width: 300px;
+    }
+}
+@keyframes out {
+    from   { 
+        width: 300px;
+    }
+    to { 
+        width: 90px;
+    }
+}
+.layers_stickymobile_1-container-social:hover  .layers_stickymobile_1-container-social-default
+{
+    animation: MoveRight 1s;
+    animation-fill-mode: forwards;
+}
+.layers_stickymobile_1-container-social:hover .layers_stickymobile_1-container-social-elem
+{
+    animation: MoveLeftEl 1s;
+    animation-fill-mode: forwards;
+}
+.layers_stickymobile_1-container-social-default
+{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    position: absolute;
+    right:10px;
+    top:8px;
+    animation: MoveLeft 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes MoveRight {
+    from   { 
+        transform: translateX(0);
+    }
+    to { 
+        transform: translateX(100px);
+    }
+}
+@keyframes MoveLeft {
+    from   { 
+        transform: translateX(100px);
+    }
+    to { 
+        transform: translateX(0);
+    }
+}
+
+.layers_stickymobile_1-container-social-elem
+{
+    height: 50px;
+    margin: 0px 20px;
+    transform: translateX(200px);
+    animation: MoveRightEl 1s;
+    animation-fill-mode: forwards;
+}
+.layers_stickymobile_1-container-social-elem:hover
+{
+    cursor: pointer;
+}
+@keyframes MoveRightEl {
+    from   { 
+        transform: translateX(0);
+    }
+    to { 
+        transform: translateX(200px);
+    }
+}
+@keyframes MoveLeftEl {
+    from   { 
+        transform: translateX(200px);
+    }
+    to { 
+        transform: translateX(0);
+    }
+}

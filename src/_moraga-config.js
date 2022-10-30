@@ -1,10 +1,11 @@
+import React from 'react';
 import Theme from './morgana-soul/core/themeHandler';
 import {Omnitrix} from './morgana-soul/core/modulesHandler';
 
 // define theme
 const theme = new Theme()
 theme.initFonts(`'Bitter'`,`'BIZ UDPMincho'`, `'Crimson Text'`)
-theme.initColors('blue', 'orange','yellow')
+theme.initColors('bda370', '291e1a','efe8da')
 
 // resources (images) from static folder
 const images = { //custom obj per build
@@ -24,17 +25,17 @@ export const core = {
                     locationName='Baile Felix' //string
                     phoneName='+40 234 234 234'
 
-                    iconsColor={'000000'} //ex: dd9a34, map and phone icons
+                    iconsColor={theme.getColorAccent_1()} //ex: dd9a34, map and phone icons
 
-                    primaryFont='Helvetica' //nav bar buttons
-                    primaryFontColor={'red'}
+                    primaryFont={theme.getFontCallToAction()} //nav bar buttons
+                    secondaryFont={theme.getFontText()} //location name and phone nr
+                    
+                    fontColor="white"
+                    fontColorOnScroll={'black'}
 
-                    secondaryFont='Arial' //location name and phone nr
-                    secondaryFontColor='lightgreen'
-
-                    bgFirstColor={'blue'}
-                    bgColor= {'orange'}
-                    underlineColor={'yellow'}
+                    bgFirstColor={'rgba(0, 0, 0, 0.68)'}
+                    bgColor= {'white'}
+                    underlineColor={`#${theme.getColorAccent_1()}`}
 
                     links={[
                         {
@@ -47,7 +48,7 @@ export const core = {
                         },
                         {
                             name: 'Galerie',
-                            ref: '/galerie'
+                            ref: '/gallery'
                         },
                         {
                             name: 'Contact',
@@ -57,8 +58,8 @@ export const core = {
 
                     logo={null}
                     hoverAnim={8} //range(1,8)
-                    hoverTextColor='lightgreen'
-                    borderBottom={null} //red
+                    hoverTextColor={null}
+                    borderBottom={`#${theme.getColorAccent_1()}`} //red
 
                     //sizes details
                     containerPadding='10px'
@@ -70,14 +71,32 @@ export const core = {
                 url: '/',
                 title: 'Page 1 title',
                 components: [
-                    <Omnitrix.Module_Layers_Intro_1 ceva="layer 1"/>,
+                    <Omnitrix.Module_Layers_Intro_1 
+                        // titleFont="Times New Roman"
+                    />,
+                    <Omnitrix.Module_Layers_StickyMobile_1
+                        iconsColor="a48454"
+                    />,
+                    <Omnitrix.Module_Layers_Widget_1
+                    
+                    />,
+                   
+                    <Omnitrix.Module_Layers_Widget_2
+
+                    />,
+                    <Omnitrix.Module_Layers_Widget_3
+                    
+                    />,
+                    <Omnitrix.Module_Layers_Widget_4
+                    
+                    />
                 ]
             },
             {
-                url: '/page1',
+                url: '/gallery',
                 title: 'Page 1 title',
                 components: [
-                    <Omnitrix.Module_Layers_Intro_1 ceva="layer 2"/>
+                    <Omnitrix.Module_Layers_Widget_5/>
                 ]
             }
         ]

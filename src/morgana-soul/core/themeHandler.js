@@ -5,10 +5,9 @@ class Theme {
         this.colors = {}
         this.fonts = {}
     }
-    initColors(accent_1, accent_2, dark, light){
+    initColors(accent_1, dark, light){
         this.colors = {
             accent_1,
-            accent_2,
             dark,
             light,
         }
@@ -20,7 +19,6 @@ class Theme {
     }
     // Getters Colors
     getColorAccent_1(){ return this.colors.accent_1} 
-    getColorAccent_2(){ return this.colors.accent_2} 
     getColorDark(){return this.colors.dark}
     getColorLight(){return this.color.light}
 

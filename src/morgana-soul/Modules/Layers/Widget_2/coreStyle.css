@@ -1,0 +1,48 @@
+.layers_widget_2-container
+{
+    display: flex;
+}
+.layers_widget_2-container-left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    width: 50%;
+}
+.layers_widget_2-container-left-img1
+{
+    height: 80%;
+    width: 60%;
+    object-fit: contain;
+    position: absolute;
+    left:40px;
+    top:40px;
+}
+.layers_widget_2-container-left-img2
+{
+    height: 50%;
+    width: 60%;
+    object-fit: contain;
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.layers_widget_2-container-right
+{
+    padding: 30px 50px;
+    width: 50%;
+}
+.layers_widget_2-container-right-title
+{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.layers_widget_2-container-right-content
+{
+    font-size: 1.7rem;
+    width: 80%;
+    padding: 30px 0px;
+}
