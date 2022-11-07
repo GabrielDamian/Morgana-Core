@@ -22,14 +22,14 @@ export default function CoreModule() {
 
   return (
     <>
-      <div  
+      {/* <div  
         className="layers_widget_5-container-header"
         style={{
           backgroundImage: `url(${DefaultBgImage})`
-      }}
+        }}
         >
           <span>Galerie</span>
-        </div>
+        </div> */}
       <div  className="layers_widget_5-container">
 
         <Gallery

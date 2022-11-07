@@ -17,40 +17,40 @@ export default function CoreModule({
     phoneName,
     
     iconsColor,
-
+    
     primaryFont,
     secondaryFont,
+
     fontColor,
     fontColorOnScroll,
 
-    // to delete
-    // 
-
     bgFirstColor,
-    bgColor,
-    underlineColor,
+    bgColorOnScroll,
+    
+    borderItemsHover,
+    hoverTextColor,
+
+    //
     links,
     logo,
     hoverAnim,
-    hoverTextColor,
     borderBottom,
+    
     containerPadding,
     logoHeight,
 })
 {
-    const [bgColorState, setBgColorState] = useState(bgFirstColor);
     useEffect(()=>{
-        console.log("bgColorState update:", bgColorState)
-        console.log("check:",bgFirstColor, bgColor )
-    },[bgColorState])
-
+        console.log("links:",links);
+    },[])
+    const [bgColorState, setBgColorState] = useState(bgFirstColor);
     useEffect(()=>{
         let checkTrigger = ()=>{
             let trigger = 100
             
             if(window.scrollY > trigger)
             {
-                setBgColorState(bgColor)
+                setBgColorState(bgColorOnScroll)
             }
             else if(window.scrollY < trigger) 
             {
@@ -114,8 +114,9 @@ export default function CoreModule({
         <div className='navbar_model_1-container navbar_model_1-underline-option ' 
             style={{ 
                 backgroundColor: bgColorState,
-                '--before-color': underlineColor,
-                '--hover-text-color': hoverTextColor,
+                '--navbar_model_1-before-color': borderItemsHover,
+                '--navbar_model_1-link-text-color': fontColor?(bgColorState==bgFirstColor ? fontColor:fontColorOnScroll):'white',
+                '--navbar_model_1-hover-text-color': hoverTextColor,
                 borderBottom: borderBottom?`2px solid ${borderBottom}`:'none',
                 padding: containerPadding ?containerPadding:'none'
                 }}>
@@ -129,15 +130,25 @@ export default function CoreModule({
                  }}
              >
                 <div className={`navbar_model_1-container-center-link-container ${decideBeforeAnimation()}`}>
-                    <Link to={links[0].ref} style={internStyle.btnLink}>{links[0].name}</Link>
-                    <Link to={links[1].ref} style={internStyle.btnLink}>{links[1].name}</Link>
+                    {
+                        links.left.map((el)=>{
+                            return(
+                                <Link to={el.ref}>{el.name}</Link>
+                            )
+                        })
+                    }
                 </div>
                 <div className='navbar_model_1-container-center-logo'>
                     <img src={logo?logo:LogoTemplate} alt="logo" style={{height: logoHeight ? logoHeight :'60px'}}/>
                 </div>
                 <div className={`navbar_model_1-container-center-link-container ${decideBeforeAnimation()}`}>
-                    <Link to={links[2].ref} style={internStyle.btnLink}>{links[2].name}</Link>
-                    <Link to={links[3].ref} style={internStyle.btnLink}>{links[3].name}</Link>
+                    {
+                        links.right.map((el)=>{
+                            return(
+                                <Link to={el.ref}>{el.name}</Link>
+                            )
+                        })
+                    }
                 </div>
             </div>
             <div className='navbar_model_1-container-location-and-phone'>
@@ -163,7 +174,7 @@ export default function CoreModule({
                 className={`navbar_model_1-container-mobile-absolute-container ${burgetActive ? 'navbar_model_1-container-mobile-absolute-container-active':''}`}>
                 <div className='navbar_model_1-container-mobile-absolute-container-top'>
                 {
-                    links.map((item)=>{
+                    links.left.map((item)=>{
                         return(
                             <div className='navbar_model_1-container-mobile-absolute-container-item'>
                                 <Link to={item.ref} style={{...internStyle.btnMobileLink }}>{item.name}</Link>
@@ -171,6 +182,16 @@ export default function CoreModule({
                         )
                     })
                 }
+                {
+                    links.right.map((item)=>{
+                        return(
+                            <div className='navbar_model_1-container-mobile-absolute-container-item'>
+                                <Link to={item.ref} style={{...internStyle.btnMobileLink }}>{item.name}</Link>
+                            </div>
+                        )
+                    })
+                }
+
                 </div>
                 <div className='navbar_model_1-container-mobile-absolute-container-bot'>
                     <img src={phoneIcon ? phoneIcon : PhoneIconDefault} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}} />

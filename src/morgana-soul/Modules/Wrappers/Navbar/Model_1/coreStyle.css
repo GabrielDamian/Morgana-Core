@@ -15,11 +15,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .navbar_model_1-container-location-and-phone img 
 {
-    height: 25px;
+    height: 20px;
     margin-right: 10px;
 }
 .navbar_model_1-container-center
@@ -37,15 +37,16 @@
 }
 .navbar_model_1-container-center-link-container a 
 {
+    color: var(--navbar_model_1-link-text-color);
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding: 7px;
     position: relative;
     overflow: hidden;
 }
 .navbar_model_1-container-center-link-container a:hover
 {
-    color: var(--hover-text-color) !important;
+    color: var(--navbar_model_1-hover-text-color);
     transition: all 0.5s ease;
 }
 /* animation reveal 1 */
@@ -54,7 +55,7 @@
     content: '';
     height: 2px;
     width: 100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
     position: absolute;
     bottom:0;
     left:-100%;
@@ -70,7 +71,7 @@
     content: '';
     height: 2px;
     width: 100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
     position: absolute;
     bottom: -100%;
     left:0;
@@ -87,7 +88,7 @@
     content: '';
     height: 2px;
     width: 100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
     position: absolute;
     bottom: 0%;
     left:-100%;
@@ -103,7 +104,7 @@
     content: '';
     height: 2px;
     width: 100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
     position: absolute;
     bottom: 0%;
     left:-100%;
@@ -127,7 +128,7 @@
 .navbar_model_1_anim_5 a:hover::before
 {
     transition: all 0.5s ease;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 /* animation reveal 6 */
 .navbar_model_1_anim_6 a::before
@@ -143,7 +144,7 @@
 .navbar_model_1_anim_6 a:hover::before
 {
     transition: all 0.5s ease;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 /* animation reveal 7 */
 .navbar_model_1_anim_7 a::before
@@ -169,7 +170,7 @@
 .navbar_model_1_anim_7 a:hover::before, a:hover::after
 {
     transition: all 0.5s ease;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 /* animation reveal 8 */
 .navbar_model_1_anim_8 a::before
@@ -180,7 +181,7 @@
     position: absolute;
     top: 0%;
     left:-100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 .navbar_model_1_anim_8 a::after
 {
@@ -190,19 +191,19 @@
     position: absolute;
     bottom: 0%;
     right: -100%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 .navbar_model_1_anim_8 a:hover::before
 {
     transition: all 0.5s ease;
     left: 50%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 .navbar_model_1_anim_8 a:hover::after
 {
     transition: all 0.5s ease;
     right: 50%;
-    background-color: var(--before-color);
+    background-color: var(--navbar_model_1-before-color);
 }
 
 .navbar_model_1-container-center-logo

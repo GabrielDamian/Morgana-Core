@@ -1,0 +1,125 @@
+.layers_widget_8-container
+{
+    display: flex;
+    height: 400px;
+}
+.layers_widget_8-container-item
+{
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.layers_widget_8-container-item:hover .layers_widget_8-container-item-desc
+{
+    animation: layers_widget_8-container-get-opacity 0.7s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes layers_widget_8-container-lose-opacity {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes layers_widget_8-container-get-opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.layers_widget_8-container-item-title
+{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: layers_widget_8-container-lose-bg 0.7s ease;
+    animation-fill-mode: forwards;
+}
+.layers_widget_8-container-item-title:hover
+{
+    animation: layers_widget_8-container-get-bg 0.7s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+@keyframes layers_widget_8-container-get-bg {
+    from{
+        background-color: rgba(188, 162, 111, 0);
+    }
+    to{
+        background-color: rgba(188, 162, 111, 0.7);
+    }
+}
+@keyframes layers_widget_8-container-lose-bg {
+    from{
+        background-color: rgba(188, 162, 111, 0.7);
+    }
+    to{
+        background-color: rgba(188, 162, 111, 0);
+    }
+}
+
+
+@keyframes layers_widget_8-container-lose-transform {
+    from{
+        transform: translateY(-110px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes layers_widget_8-container-get-transform {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-110px);
+    }
+}
+
+.layers_widget_8-container-item-title span 
+{
+    animation: layers_widget_8-container-lose-transform 0.7s ease;
+    animation-fill-mode: forwards;
+    font-size: 1.9rem;
+}
+
+.layers_widget_8-container-item-title:hover span 
+{
+    animation:  layers_widget_8-container-get-transform 0.7s ease;
+    animation-fill-mode: forwards;
+}
+
+.layers_widget_8-container-item-desc
+{
+    overflow: hidden;
+    font-size: 1.2rem;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 80%;
+    text-align: center;
+    animation: layers_widget_8-container-lose-opacity 0.6s ease;
+    animation-fill-mode: forwards;
+    pointer-events:none
+}

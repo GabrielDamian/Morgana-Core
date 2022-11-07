@@ -1,28 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
     BrowserRouter as Router,
     Routes,
     Route,
 } from "react-router-dom";
+import StickyBombMorgana from './StickyBombMorgana';
 
-
-let TestComponent = ()=>{
-    return(
-        <p>tst comp</p>
-    )
-}
 export function routerDomSpreadCore(config)
 {
-    console.log("router dom spread core:", config)
 
-    const buildPage = (NavBar, Layers, Footer)=>{
-        console.log("nav bar:", NavBar)
-        console.log("footer:", Footer)
-        console.log("layers:", Layers)
-
+    const buildPage = (metadata, NavBar, Layers, Footer)=>{
         return(
             <>
+            {/* Bomb planted on site B */}
+                <StickyBombMorgana {...metadata}/>
+            {/*  */}
                 {NavBar}
                 <>
                     {Layers.map(el=>el)}
@@ -37,9 +30,7 @@ export function routerDomSpreadCore(config)
             <Router>
                 <Routes>
                     {config.content.pages.map((page)=>{
-
-                        console.log("page:", page)
-                    return <Route path={page.url} element={buildPage(config.content.appBar,page.components, config.content.footer)}></Route>
+                    return <Route path={page.url} element={buildPage(page.metadata , config.content.appBar,page.components, config.content.footer)}></Route>
                     })}
                 </Routes>
             </Router>

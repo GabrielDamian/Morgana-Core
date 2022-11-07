@@ -6,7 +6,8 @@ import DefaultEmailIcon from './res/email.png';
 import DefaultPhoneIcon from './res/telephone.png';
 import DefaultPinIcon from './res/location.png';
 
-export default function CoreModule()
+export default function CoreModule({
+})
 {
     return(
         <div 
@@ -22,9 +23,6 @@ export default function CoreModule()
                     <img src={DefaultLogo} alt="logo"/>
                     <span className='footer_model_1-left-top-desc'>Poftă de viață bună sa ai!</span>
                     
-                </div>
-                <div className='footer_model_1-left-bot'>
-                    <button>Book Now</button>
                 </div>
             </div>
             <div className='footer_model_1-right'>

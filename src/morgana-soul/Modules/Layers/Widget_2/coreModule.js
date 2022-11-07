@@ -9,10 +9,39 @@ import DefaultBgLeft from './res/defaultBgLeft.jpg';
 export default function CoreModule({
 })
 {
+    const [makeVisible,setMakeVisible] = useState({
+        left: '',
+        right: ''
+    })
+    useEffect(()=>{
+        window.addEventListener('scroll', function() {
+            try{
+                var element = document.querySelector('#layers_widget_2-container-left');
+                var position = element.getBoundingClientRect();
+            
+                // checking for partial visibility
+                if(position.top < window.innerHeight && position.bottom >= 0) {
+                    if(makeVisible.left == '' && makeVisible.right =='')
+                    {
+                        setMakeVisible({
+                            left: 'layers_widget_2-container-left-make-visible',
+                            right: 'layers_widget_2-container-right-make-visible '
+                        })
+                    }
+                }
+            }
+            catch(err)
+            {
+
+            }
+        });
+    },[])
     return (
         <div className='layers_widget_2-container'>
+
             <div 
-                className='layers_widget_2-container-left'
+                id="layers_widget_2-container-left" 
+                className={`layers_widget_2-container-left ${makeVisible.left}`}
                 style={{
                     backgroundImage: `url('${DefaultBgLeft}')`
                 }}
@@ -20,8 +49,8 @@ export default function CoreModule({
                 <img className='layers_widget_2-container-left-img1' src={DefaultImg2} />
                 <img className='layers_widget_2-container-left-img2' src={DefaultImg1} />
             </div>
-            <div 
-                className='layers_widget_2-container-right'
+
+            <div className={`layers_widget_2-container-right ${makeVisible.right}`}
                 style={{
                     backgroundImage: `url('${DefaultImg2Fade}')`
                 }}
@@ -41,6 +70,7 @@ export default function CoreModule({
                     </span>
                 </div>
             </div>
+
         </div>
     )
 }

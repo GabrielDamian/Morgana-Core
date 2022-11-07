@@ -10,9 +10,16 @@ export default function CoreModule({
     slides,
     logoImg,
     titleFont,
-    headlineFont
+    headlineFont,
+    button:Button
 })
 {
+    useEffect(()=>{
+        setTimeout(()=>{
+            window.scrollTo(0,0);
+        },200)
+    },[])
+
     let DefaultLogo = logoImg ? logoImg : DefaultLogoImport;
     let defaultSlides = slides ? slides: [
         {
@@ -63,9 +70,7 @@ export default function CoreModule({
         //hide element
         let hideElementInterval = undefined;
         setTimeout(()=>{
-            console.log("set hide elemnt ")
             hideElementInterval = setInterval(()=>{
-                console.log("set interval hide")
                 setRevealHideSwitch('layers_intro_1-hide-element')
             },6000)
         }, 4500) 
@@ -104,6 +109,7 @@ export default function CoreModule({
                   <span className='layers_intro_1-home-title-bot' style={{fontFamily: `${headlineFont?headlineFont:''}`}}>{defaultSlides[slideIndex].bot}</span>
                 </h1>
             </div>
+            <Button />
         </div>
     )
 }

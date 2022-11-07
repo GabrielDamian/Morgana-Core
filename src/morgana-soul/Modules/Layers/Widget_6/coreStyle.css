@@ -1,0 +1,15 @@
+.layers_widget_6-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin-bottom: 30px;
+}
+.layers_widget_6-container span 
+{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transform: translateY(40px);
+}

@@ -3,13 +3,14 @@ import './coreStyle.css';
 import DefaultImage from './res/DefaultImage.jpg';
 
 export default function CoreModule({
+    button:Button
 })
 {
     return (
         <div className='layers_widget_1-container'>
-            <FlipItem title="PENSIUNE" desc="CAMERE"/>
-            <FlipItem title="PENSIUNE" desc="CAMERE"/>
-            <FlipItem title="PENSIUNE" desc="CAMERE"/>
+            <FlipItem button={Button} title="PENSIUNE" desc="CAMERE"/>
+            <FlipItem button={Button} title="PENSIUNE" desc="CAMERE"/>
+            <FlipItem button={Button} title="PENSIUNE" desc="CAMERE"/>
             {/* <div className="flip-card" style={{width:'300px',height:'300px'}}>
             <div className="flip-card-inner">
                 <div className="flip-card-front">
@@ -68,7 +69,7 @@ export default function CoreModule({
     )
 }
 
-const FlipItem = ({bgImage,title,desc})=>{
+const FlipItem = ({button:Button, bgImage,title,desc})=>{
     return(
         <div className="flip-card">
             <div className="flip-card-inner">
@@ -89,9 +90,19 @@ const FlipItem = ({bgImage,title,desc})=>{
                         <span>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry
                         </span>
-                        <button>
-                            Afla mai multe
-                        </button>
+                        <Button />
+                        {/* {
+                            Button 
+                            ? 
+                            <Button />
+                            :
+                            (
+                                <button>
+                                    Afla mai multe
+                                </button>
+                            )
+                        } */}
+
 
                     </div>
                 </div>

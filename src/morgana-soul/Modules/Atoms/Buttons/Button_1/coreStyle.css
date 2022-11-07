@@ -1,0 +1,182 @@
+.atoms_buttons_btn_1-container{ 
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 30px 20px;
+  background-color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: atoms_buttons_btn_1-bg-in 0.5s ease;
+}
+@keyframes atoms_buttons_btn_1-bg-in {
+  from{
+    background-color: transparent;
+  }
+  to{
+    background-color: antiquewhite;
+  }
+}
+@keyframes atoms_buttons_btn_1-bg-out {
+  from{
+    background-color: antiquewhite;
+  }
+  to{
+    background-color: transparent;
+  }
+}
+.atoms_buttons_btn_1-container:hover 
+{
+  transition: all 0.5s ease;
+  color: white;
+  background-color: transparent;
+  animation: atoms_buttons_btn_1-bg-out 0.5s ease;
+
+} 
+.atoms_buttons_btn_1-container:hover button 
+{
+  color: antiquewhite;
+  cursor: pointer;
+}
+.atoms_buttons_btn_1-container button
+{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.atoms_buttons_btn_1-container span 
+{
+  position: absolute;
+  background-color: antiquewhite;
+  margin:0px !important;
+}
+.atoms_buttons_btn_1-container:hover .atoms_buttons_btn_1-container-btn-span-1
+{
+  animation: atoms_buttons_btn_1-span-1-out 0.5s ease;
+} 
+.atoms_buttons_btn_1-container:hover .atoms_buttons_btn_1-container-btn-span-2
+{
+  animation: atoms_buttons_btn_1-span-2-out 0.5s ease;
+} 
+.atoms_buttons_btn_1-container:hover .atoms_buttons_btn_1-container-btn-span-3
+{
+  animation: atoms_buttons_btn_1-span-3-out 0.5s ease;
+} 
+.atoms_buttons_btn_1-container:hover .atoms_buttons_btn_1-container-btn-span-4
+{
+  animation: atoms_buttons_btn_1-span-4-out 0.5s ease;
+} 
+
+.atoms_buttons_btn_1-container-btn-span-1
+{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  animation: atoms_buttons_btn_1-span-1-in 0.5s ease;
+  animation-fill-mode: forwards; 
+  height: 2px;
+}
+@keyframes atoms_buttons_btn_1-span-1-in {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+@keyframes atoms_buttons_btn_1-span-1-out {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+
+  }
+}
+.atoms_buttons_btn_1-container-btn-span-2
+{
+  position: absolute;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 2px;
+  animation: atoms_buttons_btn_1-span-2-in 0.5s ease;
+  animation-fill-mode: forwards; 
+}
+@keyframes atoms_buttons_btn_1-span-2-in {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(100%);
+  }
+}
+@keyframes atoms_buttons_btn_1-span-2-out {
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0%);
+
+  }
+}
+.atoms_buttons_btn_1-container-btn-span-3
+{
+  position: absolute;
+  bottom:0;
+  left:0;
+  height:100%;
+  width: 2px;
+  animation: atoms_buttons_btn_1-span-3-in 0.5s ease;
+  animation-fill-mode: forwards; 
+}
+@keyframes atoms_buttons_btn_1-span-3-in {
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(100%);
+  }
+}
+@keyframes atoms_buttons_btn_1-span-3-out {
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0%);
+
+  }
+}
+.atoms_buttons_btn_1-container-btn-span-4
+{
+  position: absolute;
+  bottom:0;
+  right:0;
+  height: 100%;
+  width: 2px;
+  animation: atoms_buttons_btn_1-span-4-in 0.5s ease;
+  animation-fill-mode: forwards; 
+}
+@keyframes atoms_buttons_btn_1-span-4-in {
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(-100%);
+  }
+}
+@keyframes atoms_buttons_btn_1-span-4-out {
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+
+  }
+}
