@@ -11,10 +11,11 @@ export function routerDomSpreadCore(config)
 {
 
     const buildPage = (metadata, NavBar, Layers, Footer)=>{
+        console.log("build page:",metadata)
         return(
             <>
             {/* Bomb planted on site B */}
-                <StickyBombMorgana {...metadata}/>
+                <StickyBombMorgana metadata={metadata}/>
             {/*  */}
                 {NavBar}
                 <>
