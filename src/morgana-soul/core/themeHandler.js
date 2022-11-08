@@ -5,27 +5,21 @@ class Theme {
         this.colors = {}
         this.fonts = {}
     }
-    initColors(accent_1, dark, light){
+    initColors(color_1,color_2,color_3){
         this.colors = {
-            accent_1,
-            dark,
-            light,
+            color_1,
+            color_2,
+            color_3
         }
     }
-    initFonts(title, text, callToAction){
+    initFonts(font_1,font_2,font_3){
         this.fonts ={
-            title, text, callToAction
+            font_1,
+            font_2,
+            font_3
         }
     }
-    // Getters Colors
-    getColorAccent_1(){ return this.colors.accent_1} 
-    getColorDark(){return this.colors.dark}
-    getColorLight(){return this.color.light}
-
-    // Getters Fonts
-    getFontTitle(){return this.fonts.title}
-    getFontText(){return this.fonts.text}
-    getFontCallToAction(){return this.fonts.callToAction}
+    
 }
 
 export default Theme

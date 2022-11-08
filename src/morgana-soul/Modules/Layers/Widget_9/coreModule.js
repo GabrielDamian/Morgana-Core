@@ -5,12 +5,9 @@ import DefaultCheckedIcon from './res/check.png';
 import DefaultBg from './res/bg1.jpg';
 
 //page intro header
-export default function CoreModule({
-    title,
-    bg
-})
+export default function CoreModule(props)
 {
-    const Facilities = [
+    const Facilities = props.featuresItems?props.featuresItems:[
         'asdad',
         '22de2d',
         'sfc4rgv',
@@ -24,31 +21,54 @@ export default function CoreModule({
         <div 
             className='layers_widget_9-container'
             style={{
-                backgroundImage: `url(${DefaultBg})`
+                backgroundImage: `url(${props.bgImage?props.bgImage:DefaultBg})`
             }}
             >
             <div className='layers_widget_9-container-left'>
                 <div className='layers_widget_9-container-left-heading'>
                     <div className='layers_widget_9-container-left-heading-head'>
-                        <span>[Cool headline here]</span>
+                        <span
+                            style={{
+                                fontFamily: props.headlineFont?props.headlineFont:'Arial',
+                                fontSize: props.headlineSize?props.headlineSize:'1.1rem',
+                                color: props.headlineColor?props.headlineColor:'red'
+                            }}
+                        >{props.headline}</span>
                     </div>
                     <div className='layers_widget_9-container-left-heading-main'>
-                        <span>{title}</span>
+                        <span
+                            style={{
+                                fontFamily: props.titleFont?props.titleFont:'Arial',
+                                fontSize: props.titleSize?props.titleSize:'1.1rem',
+                                color: props.titleColor?props.titleColor:'red'
+                            }}
+                        >{props.title}</span>
                     </div>
                 </div>
                 <div className='layers_widget_9-container-left-desc'>
-                    <span>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now 
-                    </span>
+                    <span
+                        style={{
+                            fontFamily: props.contentFont?props.contentFont:'Arial',
+                            fontSize: props.contentSize?props.contentSize:'1.1rem',
+                            color: props.contentColor?props.contentColor:'red'
+                        }}
+                    >{props.content}</span>
                 </div>
                 <div className='layers_widget_9-container-left-facilities'>
                     <div className='layers_widget_9-container-left-facilities-header'>
-                        <span>Facilitati</span>
+                        <span
+                            style={{
+                                fontFamily: props.featuresFont?props.featuresFont:'Arial',
+                                fontSize: props.featuresSize?props.featuresSize:'1.1rem',
+                                color: props.featuresColor?props.featuresColor:'red',
+                                borderBottom: `2px solid ${props.underlineColor?props.underlineColor:'blue'}`
+                            }}
+                        >{props.features}</span>
                     </div>
                     <div className='layers_widget_9-container-left-facilities-items'>
                     {
                         Facilities.map((el)=>{
-                            return <FacilityItem title={el}/>
+                            return <FacilityItem title={el} all={{...props}}/>
                         })
                     }
                     </div>
@@ -56,11 +76,11 @@ export default function CoreModule({
             </div>
             <div className='layers_widget_9-container-right'>
                 <div className='layers_widget_9-container-right-img'>
-                    <img src={DefaultImage}/>
+                    <img src={props.img1?props.img1:DefaultImage}/>
                 </div>
                 
                 <div className='layers_widget_9-container-right-absolute'>
-                    <img src={DefaultImage}/>
+                    <img src={props.img2?props.img2:DefaultImage}/>
                 </div>
             </div>
         </div>
@@ -68,11 +88,17 @@ export default function CoreModule({
 }
 
 
-const FacilityItem = (props)=>{
+const FacilityItem = ({title, all})=>{
     return(
         <div className='layers_widget_9-container-left-facilities-item-el'>
             <img src={DefaultCheckedIcon}/>
-            <span>{props.title}</span>
+            <span
+                style={{
+                    fontFamily: all.featuresItemsFont?all.featuresItemsFont:'Arial',
+                    fontSize: all.featuresItemsSize?all.featuresItemsSize:'1.1rem',
+                    color: all.featuresItemsColor?all.featuresItemsColor:'red'
+                }}
+            >{title}</span>
         </div>
     )
 }

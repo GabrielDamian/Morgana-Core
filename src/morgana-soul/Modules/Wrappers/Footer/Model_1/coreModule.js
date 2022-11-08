@@ -5,30 +5,50 @@ import DefaultBgImage from './res/defaultBg.jpg';
 import DefaultEmailIcon from './res/email.png';
 import DefaultPhoneIcon from './res/telephone.png';
 import DefaultPinIcon from './res/location.png';
-
+import hexToCSSFilters from '../../../../core/utils/hexToCSSFilters';
 export default function CoreModule({
+    title,
+    titleFont,
+    
+    commText,
+    commTextFont,
+
+    logo,
+    bg,
+
+    iconsColor,
+    itemsFont,
+    
+    items,
 })
 {
     return(
         <div 
             className='footer_model_1'
             style={{
-                backgroundImage: `url('${DefaultBgImage}')`
+                backgroundImage: `url('${bg?bg:DefaultBgImage}')`
             }}
             >
             <div className='footer_model_1-left'>
                 <div className='footer_model_1-left-top'>
-                    <span className='footer_model_1-left-top-intro'>PRIVATE CHEF</span>
-                    <span className='footer_model_1-left-top-intro'>RECEPIES AND MENU DEVELOPER</span>
-                    <img src={DefaultLogo} alt="logo"/>
-                    <span className='footer_model_1-left-top-desc'>Poftă de viață bună sa ai!</span>
+                    <img src={logo?logo:DefaultLogo} alt="logo"/>
+                    <span 
+                        className='footer_model_1-left-top-desc'
+                        style={{
+                            fontFamily: commTextFont?commTextFont:'Arial'
+                        }}
+                        >{commText}</span>
                     
                 </div>
             </div>
             <div className='footer_model_1-right'>
             <div className='footer_model_1-right-top'>
-                <span>
-                    Contact
+                <span
+                    style={{
+                        fontFamily: titleFont?titleFont:'Arial'
+                    }}
+                >
+                    {title}
                 </span>
 
             </div>
@@ -38,16 +58,18 @@ export default function CoreModule({
             </div>
             <div className='footer_model_1-right-bot'>
                 <div className='footer_model_1-right-bot-col'>
-                    <FooterItem
-                        title="EMAIL"
-                        imageIcon={DefaultEmailIcon}
-                        text="defaultEmail@gmail.com"
-                    />
-                    <FooterItem
-                        title="TELEFON"
-                        imageIcon={DefaultPhoneIcon}
-                        text="0765665678"
-                    />
+                    {
+                        items.left.map((el)=>{
+                            return(
+                                <FooterItem
+                                    title={el.title}
+                                    imageIcon={el.imageIcon ?el.imageIcon:DefaultEmailIcon}
+                                    text={el.text}
+                                    iconColor={iconsColor?iconsColor:'#313131'}
+                                />
+                            )
+                        })
+                    }
                 </div>
                 <div className='footer_model_1-right-bot-separator'>
                     <div className='footer_model_1-right-bot-separator-content'>
@@ -55,16 +77,18 @@ export default function CoreModule({
                     </div>
                 </div>
                 <div className='footer_model_1-right-bot-col'>
-                    <FooterItem
-                        title="LOCATIE"
-                        imageIcon={DefaultPinIcon}
-                        text="Baile Felix"
-                    />
-                    <FooterItem
-                        title="LOCATIE"
-                        imageIcon={DefaultPinIcon}
-                        text="Baile Felix"
-                    />
+                {
+                        items.right.map((el)=>{
+                            return(
+                                <FooterItem
+                                    title={el.title}
+                                    imageIcon={el.imageIcon ?el.imageIcon:DefaultEmailIcon}
+                                    text={el.text}
+                                    iconColor={iconsColor?iconsColor:'#313131'}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </div>
             </div>
@@ -72,11 +96,11 @@ export default function CoreModule({
     )
 }
 
-const FooterItem = ({imageIcon, text,title})=>{
+const FooterItem = ({imageIcon, text,title, iconColor, })=>{
     return(
         <div className='footer_model_1-right-bot-col-item'>
             <div className='footer_model_1-right-bot-col-item-icon'>
-                <img src={imageIcon}/>
+                <img src={imageIcon} style={{filter: iconColor?`${hexToCSSFilters(iconColor)}`:`none`}}/>
                 <span>{title}</span>
             </div>
             <div className='footer_model_1-right-bot-col-item-text'>

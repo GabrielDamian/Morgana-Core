@@ -43,6 +43,7 @@
     padding: 7px;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 .navbar_model_1-container-center-link-container a:hover
 {
@@ -231,7 +232,6 @@
     left:0;
     background-color: white;
     z-index: 2;
-    
 }
 .navbar_model_1-container-mobile-logo
 {

@@ -6,15 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 //page intro header
-export default function CoreModule({
-})
+export default function CoreModule(props)
 {
-    const items = [
+    const defaultItems =props.items?props.items:[
         {
             title: 'Vila Mare',
             link: '/vila-mare',
             bg1: DefaultImage,
-            bg2: DefaultImage2,
             footers: [
                 'aparatament 1',
                 'aparatament 1',
@@ -25,7 +23,6 @@ export default function CoreModule({
             title: 'Vila Mica',
             link: '/vila-mica',
             bg1: DefaultImage2,
-            bg2: DefaultImage,
             footers: [
                 'aparatament 2',
                 'aparatament 3',
@@ -38,20 +35,20 @@ export default function CoreModule({
             id="layers_widget_8-container" 
             className='layers_widget_8-container'>
             {
-                items.map((el)=>{
-                    return <Item {...el} />
+                defaultItems.map((el)=>{
+                    return <Item el={{...el}} all={{...props}}/>
                 })
             }
            
         </div>
     )
 }
-const Item = (props)=>{
+const Item = ({el,all})=>{
     
     const navigate = useNavigate();
     
     const handleRedirect = ()=>{
-        navigate(props.link)
+        navigate(el.link)
     }
 
     return(
@@ -59,26 +56,44 @@ const Item = (props)=>{
             onClick={handleRedirect}
             className='layers_widget_8-container-item'
             style={{
-                backgroundImage: `url(${props.bg1})`
+                '--layers_widget_8-hover-color': all.bgColorHover,
+                backgroundImage: `url(${el.bg1})`
             }}
             >
-                <div 
-                    className='layers_widget_8-container-item-title'
+                <div className='layers_widget_8-container-item-title'>
+                    <span
+                        style={{
+                            fontSize: all.titleSize?all.titleSize:'1.1rem',
+                            fontFamily: all.titleFont?all.titleFont:'Arial',
+                            color: all.titleColor?all.titleColor:'black',
+                            backgroundColor: all.titleBgColor?all.titleBgColor:'gray'
+                        }}
                     >
-                    <span>
-                        {props.title}
+                        {el.title}
                     </span>
                 </div>
                 <div className='layers_widget_8-container-item-desc'>
-                    <span>
-                        {props.textHover}
+                    <span
+                        style={{
+                            fontSize: all.descSize?all.descSize:'1.1rem',
+                            fontFamily: all.descFont?all.descFont:'Arial',
+                            color: all.descColor?all.descColor:'black',
+                        }}
+                    >
+                        {el.textHover}
                     </span>
                     <br></br>
                     {
-                        props.footers.map((el)=>{
+                        el.footers.map((el)=>{
                             return(
                                 <>
-                                    <span>-- {el} --</span>
+                                    <span
+                                        style={{
+                                            fontSize: all.descSize?all.descSize:'1.1rem',
+                                            fontFamily: all.descFont?all.descFont:'Arial',
+                                            color: all.descColor?all.descColor:'black',
+                                        }}
+                                    >-- {el} --</span>
                                 </>
                             )
                         })

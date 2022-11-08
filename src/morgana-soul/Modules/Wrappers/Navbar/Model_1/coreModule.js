@@ -4,6 +4,7 @@ import MapPinIconDefault from './res/maps-and-flags.svg';
 import PhoneIconDefault from './res/phone-call.svg';
 import LogoTemplate from './res/logo-template.png';
 import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import hexToCSSFilters from '../../../../core/utils/hexToCSSFilters';
 import {
@@ -28,6 +29,7 @@ export default function CoreModule({
     bgFirstColor,
     bgColorOnScroll,
     
+    mobileFontSize,
     borderItemsHover,
     hoverTextColor,
 
@@ -47,9 +49,7 @@ export default function CoreModule({
         setBurgerActive(false);
     },[location])
 
-    useEffect(()=>{
-        console.log("links:",links);
-    },[])
+    
     const [bgColorState, setBgColorState] = useState(bgFirstColor);
     useEffect(()=>{
         let checkTrigger = ()=>{
@@ -108,13 +108,21 @@ export default function CoreModule({
             padding:burgetActive ? '20px' :'0px',
             fontSize:'2.5rem',
             textDecoration: 'none',
-            overflow:'hidden'
+            overflow:'hidden',
+            fontSize: mobileFontSize?mobileFontSize:'1.5rem'
         },
         phoneLocationSpan:{
             fontFamily: secondaryFont?secondaryFont:'none',
             color: fontColor?(bgColorState==bgFirstColor ? fontColor:fontColorOnScroll):'white'
         }
 
+    }
+
+    const navigate = useNavigate();
+    
+    const homePageRedirect = ()=>{
+        console.log("redirect");
+        navigate('/');
     }
     return(
         <>
@@ -146,7 +154,7 @@ export default function CoreModule({
                     }
                 </div>
                 <div className='navbar_model_1-container-center-logo'>
-                    <img src={logo?logo:LogoTemplate} alt="logo" style={{height: logoHeight ? logoHeight :'60px'}}/>
+                    <img onClick={homePageRedirect} src={logo?logo:LogoTemplate} alt="logo" style={{height: logoHeight ? logoHeight :'60px'}}/>
                 </div>
                 <div className={`navbar_model_1-container-center-link-container ${decideBeforeAnimation()}`}>
                     {
@@ -163,9 +171,14 @@ export default function CoreModule({
                 <span style={internStyle.phoneLocationSpan} >{phoneName}</span>
             </div>
         </div>
-        <div className='navbar_model_1-container-mobile' style={{backgroundColor: bgColorState}}>
+        <div className='navbar_model_1-container-mobile' 
+             style={{
+                    backgroundColor: bgColorState,
+                    borderBottom: borderBottom? `2px solid ${borderBottom}`:'none'
+                    }}>
             <div className='navbar_model_1-container-mobile-logo'>
                 <img
+                    onClick={homePageRedirect}
                     src={logo?logo:LogoTemplate} alt="logo" style={{height: logoHeight ? logoHeight :'60px'}}/>
             </div>
             <div 
@@ -177,7 +190,10 @@ export default function CoreModule({
             </div>
 
             <div 
-                style={{backgroundColor: bgColorState}}
+                style={{
+                    backgroundColor: bgColorState,
+                    fontFamily: primaryFont ? primaryFont:'none',
+                }}
                 className={`navbar_model_1-container-mobile-absolute-container ${burgetActive ? 'navbar_model_1-container-mobile-absolute-container-active':''}`}>
                 <div className='navbar_model_1-container-mobile-absolute-container-top'>
                 {

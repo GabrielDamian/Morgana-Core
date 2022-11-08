@@ -4,12 +4,24 @@ import {Omnitrix} from './morgana-soul/core/modulesHandler';
 
 // define theme
 const theme = new Theme()
-theme.initFonts(`Inknut Antiqua`,`'BIZ UDPMincho'`, `'Crimson Text'`)
-theme.initColors('bda370', '291e1a','efe8da')
+theme.initFonts(`'Karla', sans-serif`,`'Zen Antique', serif`,null)
+theme.initColors('#313131','#d8b774','#f8f8f8')//black, gold, white
 
 // resources (images) from static folder
 const images = { //custom obj per build
-    logo: './logo.png',
+    logo: './img/logo.png',
+    bg_1: './img/Acasa/bg-1.jpg',
+    bg_2: './img/Acasa/bg-2.jpg',
+    bg_3: './img/Acasa/bg-3.jpg',
+    ciubar: './img/Acasa/ciubar.jpg',
+    design: './img/Acasa/design.jpg',
+    vilaMare: './img/Acasa/vila-mare.jpg',
+    presentation_1: './img/Acasa/pres_1.jpg',
+    presentation_2: './img/Acasa/pres_2.jpg',
+    presentation_bg: './img/Acasa/pres_3.jpg',
+
+    gallery_1:'./img/Acasa/gal_1.jpg',
+
 }
 
 // define pages
@@ -19,28 +31,29 @@ export const core = {
     content:{
         appBar: <Omnitrix.Module_Wrappers_Navbar_1
                     mapIcon={null} //svg ref
-                    locationName='Baile Felix' //string
+                    locationName='Predeal' //string
                     
                     phoneIcon={null} //svg ref
-                    phoneName='+40 234 234 234'
+                    phoneName='+40 759 071 937'
 
-                    iconsColor={theme.getColorAccent_1()} //ex: dd9a34, without '#'
+                    iconsColor={theme.colors.color_2} //ex: dd9a34, without '#'
 
-                    primaryFont={theme.getFontCallToAction()} //nav bar buttons
-                    secondaryFont={theme.getFontText()} //location name and phone nr
+                    primaryFont={theme.fonts.font_1} //nav bar buttons
+                    secondaryFont={theme.fonts.font_2} //location name and phone nr
                     
                     fontColor="white" //ex: red, hex, rgba
                     fontColorOnScroll={'black'} 
 
-                    bgFirstColor={'rgba(0, 0, 0, 0.68)'}
-                    bgColorOnScroll= {'white'}
+                    bgFirstColor={'rgba(49, 49, 49, 0.8)'}
+                    bgColorOnScroll= {theme.colors.color_3}
 
-                    borderItemsHover={`#${theme.getColorAccent_1()}`}
+                    mobileFontSize={'1.3rem'}
+                    borderItemsHover={`${theme.colors.color_2}`}
                     hoverTextColor = {`gray`}
                     links={{
                         left:[
                             {
-                                name: 'Acasa',
+                                name: 'Acasă',
                                 ref: '/'
                             },
                             
@@ -49,7 +62,7 @@ export const core = {
                                 ref: '/gallery'
                             },
                             {
-                                name: 'Facilitati',
+                                name: 'Facilități',
                                 ref: '/facilitati'
                             },
                         ],
@@ -59,7 +72,7 @@ export const core = {
                                 ref: '/vila-mare'
                             },
                             {
-                                name: 'Vila Mica ',
+                                name: 'Vila Mică ',
                                 ref: '/vila-mica'
                             },
                             {
@@ -71,64 +84,270 @@ export const core = {
 
                     logo={images.logo}
                     hoverAnim={8} //range(1,8)
-                    borderBottom={`#${theme.getColorAccent_1()}`} //color with #
+                    borderBottom={`${theme.colors.color_2}`} //color with #
 
                     containerPadding='10px'
                     logoHeight='50px'   
                 />,
         footer: <Omnitrix.Module_Wrappers_Footer_1 
+                    title={'CONTACT'}
+                    titleFont={theme.fonts.font_1}
+                    
+                    commText={'Cool text 3'}
+                    commTextFont={theme.fonts.font_2}
+
+                    logo={images.logo}
+                    bg={null}
+
+                    iconsColor={theme.colors.color_2}
+                    itemsFont={theme.fonts.font_1}
+
+                    items={{
+                        left:[
+                                {
+                                    title:"LOCATIE1",
+                                    imageIcon: './img/Acasa/mail.png',
+                                    text:"Baile Felix",
+                                },
+                                {
+                                    title:"LOCATIE2",
+                                    imageIcon: './img/Acasa/mail.png',
+                                    text:"Baile Felix",
+                                },
+                            ],
+                        right:
+                            [
+                                {
+                                    title:"LOCATIE3",
+                                    imageIcon: './img/Acasa/mail.png',
+                                    text:"Baile Felix",
+                                },
+                                {
+                                    title:"LOCATIE4",
+                                    imageIcon: './img/Acasa/mail.png',
+                                    text:"Baile Felix",
+                                },
+                            ],
+                    }}
                     
         />,
         pages:[
             {
                 url: '/',
                 metadata: {
-                    title: 'Page 1 title',
-                    desc: 'Page 1 description'
+                    title: 'Colții Morarului - Acasă',
+                    desc: 'Pagina Acasa Pensiunea Coltii Morarului'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Intro_1 
-                        // titleFont="Times New Roman"
+                        //TODO: set up callback for scroll on button click
                         button={Omnitrix.Atom_Buttons_Btn_1}
                         logoImg={images.logo}
-                        titleFont={theme.getFontTitle()}
-                        // slides={[{  
-                        //             bg: './bg-1.jpeg',
-                        //             top: 'Vilele Colții Morarului',
-                        //             bot: 'coold headline here 1'
-                        //         },
-                        //         {  
-                        //             bg: './bg-2.jpeg',
-                        //             top: 'Vilele Colții Morarului',
-                        //             bot: 'coold headline here 2'
-                        //         },
-                                
-                            
-                        //     ]
-                        // }
+
+                        titleFont={theme.fonts.font_2}
+                        headlineFont={theme.fonts.font_1}
+                        
+                        titleFontSize={'3rem'}
+                        headlineFontSize={'1.3rem'}
+                        
+                        slides={[{  
+                                    bg: images.bg_1,
+                                    top: 'Vilele Colții Morarului',
+                                    bot: 'coold headline here 1'
+                                },
+                                {  
+                                    bg: images.bg_2,
+                                    top: 'Vilele Colții Morarului',
+                                    bot: 'coold headline here 2'
+                                },
+                                {  
+                                    bg: images.bg_3,
+                                    top: 'Vilele Colții Morarului',
+                                    bot: 'coold headline here 3'
+                                },
+                            ]
+                        }
                     />,
                     <Omnitrix.Module_Layers_StickyMobile_1
                         iconsColor="a48454"
-                        
                     />,
                     <Omnitrix.Module_Layers_Widget_1
+                        //TODO: set up callback for features redirect
                         button={Omnitrix.Atom_Buttons_Btn_1}
+                        items={[
+                            {
+                                title: 'Ciubar',
+                                headline: 'bla bla',
+                                desc: 'more and more and more bla bla bla',
+                                bg: images.ciubar
+                            },
+                            {
+                                title: 'Design',
+                                headline: 'bla bla',
+                                desc: 'more and more and more bla bla bla',
+                                bg: images.design
+                            },
+                            {
+                                title: 'Gratar',
+                                headline: 'bla bla',
+                                desc: 'more and more and more bla bla bla',
+                                bg: images.ciubar
+                            }
+                        ]}
+
+                        titleColor={theme.colors.color_2}
+                        titleBgColor={theme.colors.color_1}
+                        titleFont={theme.fonts.font_2}
+                        titleSize={'1.5rem'}
+
+                        headlineColor={theme.colors.color_1}
+                        headlineBgColor={theme.colors.color_3}
+                        headlineFont={theme.fonts.font_1}
+                        headlineSize={'1rem'}
+
+                        descColor={theme.colors.color_3}
+                        descFont={theme.fonts.font_1}
+                        bgColorBack={'rgba(49, 49, 49, 0.5)'}
                     />,
                     <Omnitrix.Module_Layers_Widget_8
+                        items={
+                            [
+                                {
+                                    title: 'VILA MARE',
+                                    link: '/vila-mare',
+                                    bg1: images.vilaMare,
+                                    footers: [
+                                        'aparatament 1',
+                                        'aparatament 1',
+                                    ],
+                                    textHover: 'It its lato using Content here, content here, making it look like readable English. Many desktop publishing packages and web page edit'
+                                },
+                                {
+                                    title: 'VILA MICA',
+                                    link: '/vila-mica',
+                                    bg1: images.bg_3,
+                                    footers: [
+                                        'aparatament 2',
+                                        'aparatament 3',
+                                    ],
+                                    textHover: 'Idistribution of lettsed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page edit'
+                                },
+                            ]
+                        }
+
+                        bgColorHover={'rgba(49, 49, 49, 0.6)'}
+
+                        titleSize={'2.5rem'}
+                        titleFont={theme.fonts.font_2}
+                        titleColor={theme.colors.color_2}
+                        titleBgColor={theme.colors.color_1}
                     
-                    
+                        descSize={'1.1rem'}
+                        descFont={theme.fonts.font_1}
+                        descColor={theme.colors.color_3}
                     />,
                     <Omnitrix.Module_Layers_Widget_2
+                        title={"Despre Coltii Morarului"}
+                        titleSize={'1.9rem'}
+                        titleFont={theme.fonts.font_2}
 
+                        desc={[
+                            'Lorem Ipsum is simply dumuse in the indutry s standard dummy text ever since the',
+                            'Lorenduply dummy tee the indupeen the induply dummy teen the induply dumeen the induply dummy teen the induply dumeen the induply dummy teen the induply dumeen the induply dummy teen the induply dummy teen the induply dummy teen the industry s standard dummy text ever since the',
+                            'Lorem Ipsum is sy dummy teen  is sy dummy teen  is sy dummy teen  is sy dummy teen the induply dummy teen the induply dummy teen the industry s standard dummy text ever since the',
+                        ]}
+                        descSize={'1.1rem'}
+                        descFont={theme.fonts.font_1}
+
+                        img1={images.presentation_2}
+                        img2={images.presentation_1}
+
+                        bgLeft={null}
+                        bgRight={images.presentation_bg}
+
+                        invertOrder={true}
                     />,
                     <Omnitrix.Module_Layers_Widget_3
+                        pictures={[
+                            './img/Acasa/gal_1.jpg',
+                            './img/Acasa/gal_2.jpg',
+                            './img/Acasa/gal_3.jpg',
+                            './img/Acasa/gal_4.jpg',
+                            './img/Acasa/gal_5.jpg',
+                            './img/Acasa/gal_6.jpg',
+                            './img/Acasa/gal_7.jpg',
+                            './img/Acasa/gal_8.jpg',
+                        ]}
                     
                     />,
                     <Omnitrix.Module_Layers_Widget_4
+                        title={'FACILITATI'}
+                        titleSize={'2.5rem'}
+                        titleFont={theme.fonts.font_1}
+                        titleColor={theme.colors.color_4}
+
+                        topIcon={'./img/Acasa/abstract.png'}
+                        topIconColor={theme.colors.color_2}
+                        separatorColor={theme.colors.color_2}
+
+                        items={[
+                            {
+                                icon: './img/Acasa/facility-item.jpg',
+                                title: 'Restaurant1',
+                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                            },
+                            {
+                                icon: './img/Acasa/facility-item.jpg',
+                                title: 'Restaurant2',
+                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                            },
+                            {
+                                icon: './img/Acasa/facility-item.jpg',
+                                title: 'Restaurant3',
+                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                            },
+                        ]}
+
+                        itemsIconColor={theme.colors.color_2}
+                        
+                        itemsTitleFont={theme.fonts.font_2}
+                        itemsTitleColor={theme.colors.color_3}
+                        itemsTitleSize={'2.2rem'}
+
+                        itemsDescColor={theme.colors.color_3}
+                        itemsDescFont={theme.fonts.font_1}
+                        itemsDescSize={'1rem'}
+
+                        bgImage={'./img/Acasa/facilitati-bg.jpg'}
                     
                     />,
                     <Omnitrix.Module_Layers_Widget_7
-                    
+                        slides = {[
+                            {
+                                title:  'Pârtia Subteleferic',
+                                desc: ' Pârtia Subteleferic este o pârtie neagră cu un grad avansat de dificultate și o lungime de 1200 de metri. Are o diferență de nivel de 350 de metri, o înclinație de 31% și este deservită de o instalație de transport pe cablu: Telescaun Predeal. ',
+                                img1: './img/Acasa/atractie_1.jpg',
+                                img2: './img/Acasa/atractie_2.jpg',
+                            },
+                            {
+                                title:  'Cascada Tamina',
+                                desc: `Dacă eşti în zona Timişu de Sus sau prin Predeal, o vizionare a acestei cascade poate fi un bun prilej pentru o drumeţie de aprox. 2,5km.
+                                După ce laşi maşina la DN1 caută şi urmăreşte traseul "bandă albastră" care te va duce la cascadă în 1h-1h30min, depinde cât de sprinten(ă) şi grăbit(ă) eşti; sau poţi merge pe drumul forestier care şerpuieşte prin pădure - e mai lung (aproape 4 km, 2 ore) dar mult mai uşor de parcurs. `,
+                                img1: './img/Acasa/tamina1.jpg',
+                                img2: './img/Acasa/tamina2.jpg',
+                            },
+                        ]}
+                        dummyHeadline={'Ce vedem in Predeal'}
+
+                        bgImage={'./img/Acasa/atractii-bg.jpg'}
+
+                        titleSize={'2.1rem'}
+                        titleFont={theme.fonts.font_2}
+                        titleColor={theme.colors.color_1}
+
+                        descSize={'1.3rem'}
+                        descFont={theme.fonts.font_1}
+                        descColor={theme.colors.color_1}
                     />
                 ]
             },
@@ -140,9 +359,65 @@ export const core = {
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
+                        bgImage={'./img/Acasa/gal_1.jpg'}
                         title="Galerie"
                     />,
-                    <Omnitrix.Module_Layers_Widget_5/>,
+                    <Omnitrix.Module_Layers_Widget_5
+                        imagesProps={[
+                            {
+                                src: './img/Acasa/gal_1.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_2.jpg',
+                                width: 200,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_3.jpg',
+                                width: 220,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_4.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_5.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_6.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_3.jpg',
+                                width: 220,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_4.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_5.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_6.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+
+                        ]}
+                        defaultValues={false}
+                    />,
                 ]
             },
             {
@@ -154,18 +429,201 @@ export const core = {
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
                         title="vila-mare"
+                        bgImage={'./img/Acasa/gal_2.jpg'}
+                    />,
+                    <Omnitrix.Module_Layers_Widget_9
+
+                        bgImage={'./img/Acasa/camere-bg.jpg'}
+                        img1={'./img/Acasa/gal_2.jpg'}
+                        img2={'./img/Acasa/gal_2.jpg'}
+
+                        headline={"1Cool headline here"}
+                        headlineFont={theme.fonts.font_1}
+                        headlineSize={'1.1rem'}
+                        headlineColor={'gray'}
                         
-                    />,
-                    <Omnitrix.Module_Layers_Widget_9
                         title="Apartament 1"
-                        bg={null}
+                        titleFont={theme.fonts.font_2}
+                        titleSize={'1.8rem'}
+                        titleColor={theme.colors.color_1}
+                        
+                        content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                        contentFont={theme.fonts.font_1}
+                        contentSize={"1.1rem"}
+                        contentColor={theme.colors.color_1}
+
+                        features="Facilitati 1"
+                        featuresFont={theme.fonts.font_1}
+                        featuresSize={'1.2rem'}
+                        featuresColor={theme.colors.color_1}
+                        underlineColor={theme.colors.color_2}
+
+                        featuresItems={[
+                            'asdasad',
+                            '23423234234',
+                            '3fefgdfgd',
+                            'asdasad',
+                            '23423234234',
+                        ]}
+
+                        featuresItemsFont={theme.fonts.font_1}
+                        featuresItemsSize={'1rem'}
+                        featuresItemsColor={theme.colors.color_1}
+
                     />,
-                    <Omnitrix.Module_Layers_Widget_5/>,
+                    <Omnitrix.Module_Layers_Widget_5
+                        imagesProps={[
+                            {
+                                src: './img/Acasa/gal_1.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_2.jpg',
+                                width: 200,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_3.jpg',
+                                width: 220,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_4.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_5.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_6.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_3.jpg',
+                                width: 220,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_4.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_5.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_6.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+
+                        ]}
+                        defaultValues={false}
+                    />,
                     <Omnitrix.Module_Layers_Widget_9
-                        title="Apartament 2"
-                        bg={null}
-                    />,
-                    <Omnitrix.Module_Layers_Widget_5/>,
+
+                    bgImage={'./img/Acasa/camere-bg.jpg'}
+                    img1={'./img/Acasa/gal_2.jpg'}
+                    img2={'./img/Acasa/gal_2.jpg'}
+
+                    headline={"2Cool headline here"}
+                    headlineFont={theme.fonts.font_1}
+                    headlineSize={'1.1rem'}
+                    headlineColor={'gray'}
+                    
+                    title="Apartament 1"
+                    titleFont={theme.fonts.font_2}
+                    titleSize={'1.8rem'}
+                    titleColor={theme.colors.color_1}
+                    
+                    content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                    contentFont={theme.fonts.font_1}
+                    contentSize={"1.1rem"}
+                    contentColor={theme.colors.color_1}
+
+                    features="Facilitati 1"
+                    featuresFont={theme.fonts.font_1}
+                    featuresSize={'1.2rem'}
+                    featuresColor={theme.colors.color_1}
+                    underlineColor={theme.colors.color_2}
+
+                    featuresItems={[
+                        'asdasad',
+                        '23423234234',
+                        '3fefgdfgd',
+                        'asdasad',
+                        '23423234234',
+                        '3fefgdfgd',
+                    ]}
+
+                    featuresItemsFont={theme.fonts.font_1}
+                    featuresItemsSize={'1.1rem'}
+                    featuresItemsColor={theme.colors.color_1}
+
+                />,
+                <Omnitrix.Module_Layers_Widget_5
+                    imagesProps={[
+                        {
+                            src: './img/Acasa/gal_1.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_2.jpg',
+                            width: 200,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 220,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_4.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_5.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 220,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_4.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_5.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+
+                    ]}
+                    defaultValues={false}
+                />
                 ]
             },
             {
@@ -177,18 +635,203 @@ export const core = {
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
                         title="vila-mica"
+                        bgImage={'./img/Acasa/gal_3.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_9
-                        title="Apartament 3"
 
-                    />,
-                    <Omnitrix.Module_Layers_Widget_5/>,
+                    bgImage={'./img/Acasa/camere-bg.jpg'}
+                    img1={'./img/Acasa/gal_2.jpg'}
+                    img2={'./img/Acasa/gal_2.jpg'}
+
+                    headline={"3Cool headline here"}
+                    headlineFont={theme.fonts.font_1}
+                    headlineSize={'1.1rem'}
+                    headlineColor={'gray'}
                     
-                    <Omnitrix.Module_Layers_Widget_9
-                        title="Apartament 4"
+                    title="Apartament 1"
+                    titleFont={theme.fonts.font_2}
+                    titleSize={'1.8rem'}
+                    titleColor={theme.colors.color_1}
+                    
+                    content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                    contentFont={theme.fonts.font_1}
+                    contentSize={"1.1rem"}
+                    contentColor={theme.colors.color_1}
 
-                    />,
-                    <Omnitrix.Module_Layers_Widget_5/>,
+                    features="Facilitati 1"
+                    featuresFont={theme.fonts.font_1}
+                    featuresSize={'1.2rem'}
+                    featuresColor={theme.colors.color_1}
+                    underlineColor={theme.colors.color_2}
+
+                    featuresItems={[
+                        'asdasad',
+                        '23423234234',
+                        '3fefgdfgd',
+                        'asdasad',
+                        '23423234234',
+                        '3fefgdfgd',
+                    ]}
+
+                    featuresItemsFont={theme.fonts.font_1}
+                    featuresItemsSize={'1.1rem'}
+                    featuresItemsColor={theme.colors.color_1}
+
+                />,
+                <Omnitrix.Module_Layers_Widget_5
+                    imagesProps={[
+                        {
+                            src: './img/Acasa/gal_1.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_2.jpg',
+                            width: 200,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 220,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_4.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_5.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 220,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_4.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_5.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+
+                    ]}
+                    defaultValues={false}
+                />,
+                <Omnitrix.Module_Layers_Widget_9
+
+                bgImage={'./img/Acasa/camere-bg.jpg'}
+                img1={'./img/Acasa/gal_2.jpg'}
+                img2={'./img/Acasa/gal_2.jpg'}
+
+                headline={"4Cool headline here"}
+                headlineFont={theme.fonts.font_1}
+                headlineSize={'1.1rem'}
+                headlineColor={'gray'}
+                
+                title="Apartament 1"
+                titleFont={theme.fonts.font_2}
+                titleSize={'1.8rem'}
+                titleColor={theme.colors.color_1}
+                
+                content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                contentFont={theme.fonts.font_1}
+                contentSize={"1.1rem"}
+                contentColor={theme.colors.color_1}
+
+                features="Facilitati 1"
+                featuresFont={theme.fonts.font_1}
+                featuresSize={'1.2rem'}
+                featuresColor={theme.colors.color_1}
+                underlineColor={theme.colors.color_2}
+
+                featuresItems={[
+                    'asdasad',
+                    '23423234234',
+                    '3fefgdfgd',
+                    'asdasad',
+                    'asdasad',
+                    '23423234234',
+                    '3fefgdfgd',
+                ]}
+
+                featuresItemsFont={theme.fonts.font_1}
+                featuresItemsSize={'1.1rem'}
+                featuresItemsColor={theme.colors.color_1}
+
+            />,
+            <Omnitrix.Module_Layers_Widget_5
+                imagesProps={[
+                    {
+                        src: './img/Acasa/gal_1.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_2.jpg',
+                        width: 200,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_3.jpg',
+                        width: 220,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_4.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_5.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_6.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_3.jpg',
+                        width: 220,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_4.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_5.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+                    {
+                        src: './img/Acasa/gal_6.jpg',
+                        width: 250,
+                        height: 220,
+                    },
+
+                ]}
+                defaultValues={false}
+            />
                 ]
             },
             {
@@ -200,30 +843,70 @@ export const core = {
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
                         title="facilitati"
+                        bgImage={'./img/Acasa/gal_4.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="Feature title 1"
-                        headline="Cool head param"
-                        text="Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={null}
-                        img2={null}
+                        title="11 Feature title 1"
+                        titleFont={theme.fonts.font_1}
+                        titleFontSize={'1.7rem'}
+                        undelineBorderColor={theme.colors.color_2}
+                        titleColor={theme.colors.color_1}
+
+                        headline="11 Cool head param 11"
+                        headlineFont={theme.fonts.font_1}
+                        headlineSize={'1.2rem'}
+
+                        contentFont={theme.fonts.font_1}
+                        contentSize={'1.3rem'}
+                        contentColor={theme.colors.color_1}
+                        
+                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={'./img/Acasa/gal_4.jpg'}
+                        img2={'./img/Acasa/gal_4.jpg'}
                         invertOrder={true}
+                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="Feature title 2"
-                        headline="2Cool head param"
-                        text="2Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={null}
-                        img2={null}
+                        title="11 Feature title 1"
+                        titleFont={theme.fonts.font_1}
+                        titleFontSize={'1.7rem'}
+                        undelineBorderColor={theme.colors.color_2}
+                        titleColor={theme.colors.color_1}
+
+                        headline="11 Cool head param 11"
+                        headlineFont={theme.fonts.font_1}
+                        headlineSize={'1.2rem'}
+
+                        contentFont={theme.fonts.font_1}
+                        contentSize={'1.3rem'}
+                        contentColor={theme.colors.color_1}
+                        
+                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={'./img/Acasa/gal_4.jpg'}
+                        img2={'./img/Acasa/gal_4.jpg'}
                         invertOrder={false}
+                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="Feature title3"
-                        headline="3Cool head param"
-                        text="3Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={null}
-                        img2={null}
+                        title="11 Feature title 1"
+                        titleFont={theme.fonts.font_1}
+                        titleFontSize={'1.7rem'}
+                        undelineBorderColor={theme.colors.color_2}
+                        titleColor={theme.colors.color_1}
+
+                        headline="11 Cool head param 11"
+                        headlineFont={theme.fonts.font_1}
+                        headlineSize={'1.2rem'}
+
+                        contentFont={theme.fonts.font_1}
+                        contentSize={'1.3rem'}
+                        contentColor={theme.colors.color_1}
+                        
+                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={'./img/Acasa/gal_4.jpg'}
+                        img2={'./img/Acasa/gal_4.jpg'}
                         invertOrder={true}
+                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
                     />,
                 ]
             },
@@ -236,6 +919,7 @@ export const core = {
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
                         title="Contact"
+                        bgImage={'./img/Acasa/gal_5.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_11
                         onlyMap={false}

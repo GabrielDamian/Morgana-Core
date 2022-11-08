@@ -3,14 +3,7 @@ import './coreStyle.css';
 import DefaultImage from './res/DefaultImage.jpg';
 import DefaultBg from './res/bg.jpg';
 //page intro header
-{
-    // title,
-    // headline,
-    // text,
-    // img1,
-    // img2,
-    // invertOrder //boolean
-}
+
 export default function CoreModule(props)
 {
     const [ignoreInvertOrder, setIgnoreInvertOrder] = useState(false);
@@ -19,7 +12,6 @@ export default function CoreModule(props)
     useLayoutEffect(() => {
         
         function updateSize() {
-          console.log("new width:",window.innerWidth);
             if(window.innerWidth < mobileBreakpoint)
             {
                 setIgnoreInvertOrder(true)
@@ -59,7 +51,7 @@ export default function CoreModule(props)
         <div 
             className='layers_widget_10-container'
             style={{
-                backgroundImage: `url('${DefaultBg}')`
+                backgroundImage: `url('${props.bgImg?props.bgImg:DefaultBg}')`
             }}
             >
             {
@@ -68,29 +60,44 @@ export default function CoreModule(props)
         </div>
     )
 }
-const Container1 = ({
-    title,
-    headline,
-    text,
-})=>{
-    useEffect(()=>{
-        console.log("title check:", title);
-    },[title])
+const Container1 = (props)=>{
     return(
         <div className='layers_widget_10-container-left'>
         <div className='layers_widget_10-container-left-head'>
             <div className='layers_widget_10-container-left-head-headline'>
-                <span>[{headline}]</span>
+                <span
+                    style={{
+                        fontFamily: props.headlineFont?props.headlineFont:'Arial',
+                        fontSize: props.headlineSize?props.headlineSize:'1.7rem'
+                    }}
+                >{props.headline}</span>
             </div>
             <div className='layers_widget_10-container-left-head-title'>
-                <span>{title}</span>
+                <span
+                    style={{
+                        fontFamily: props.titleFont?props.titleFont:'Arial',
+                        fontSize: props.titleFontSize?props.titleFontSize:'1.7rem',
+                        color: props.titleColor?props.titleColor:'red'
+                    }}
+                >{props.title}</span>
             </div>
-            <div className='layers_widget_10-container-left-head-separator'>
+            <div 
+                className='layers_widget_10-container-left-head-separator'
+                style={{
+                    backgroundColor: props.undelineBorderColor?props.undelineBorderColor:'red'
+                }}
+                >
 
             </div>
         </div>
         <div className='layers_widget_10-container-left-content'>
-            <span>{text}</span>
+            <span
+                style={{
+                    fontFamily: props.contentFont?props.contentFont:'Arial',
+                    fontSize: props.contentSize?props.contentSize:'1.7rem',
+                    color: props.contentColor?props.contentColor:'red'
+                }}
+            >{props.text}</span>
         </div>
     </div>
     )

@@ -7,6 +7,21 @@ import DefaultBgLeft from './res/defaultBgLeft.jpg';
 
 
 export default function CoreModule({
+    title,
+    titleSize,
+    titleFont,
+
+    desc,
+    descSize,
+    descFont,
+
+    img1,
+    img2,
+
+    bgLeft,
+    bgRight,
+
+    invertOrder
 })
 {
     const [makeVisible,setMakeVisible] = useState({
@@ -38,39 +53,51 @@ export default function CoreModule({
     },[])
     return (
         <div className='layers_widget_2-container'>
-
             <div 
                 id="layers_widget_2-container-left" 
                 className={`layers_widget_2-container-left ${makeVisible.left}`}
                 style={{
-                    backgroundImage: `url('${DefaultBgLeft}')`
+                    backgroundImage: `url('${bgLeft?bgLeft:DefaultBgLeft}')`
                 }}
                 >
-                <img className='layers_widget_2-container-left-img1' src={DefaultImg2} />
-                <img className='layers_widget_2-container-left-img2' src={DefaultImg1} />
+                <img className='layers_widget_2-container-left-img1' src={img1?img1:DefaultImg2} />
+                <img className='layers_widget_2-container-left-img2' src={img2?img2:DefaultImg1} />
             </div>
 
             <div className={`layers_widget_2-container-right ${makeVisible.right}`}
                 style={{
-                    backgroundImage: `url('${DefaultImg2Fade}')`
+                    backgroundImage: `url('${bgRight?bgRight:DefaultImg2Fade}')`
                 }}
                 >
                 <div className='layers_widget_2-container-right-title'>
-                    <span>WELCOME</span>
+                    <span
+                        style={{
+                            fontSize: titleSize?titleSize:'1.9rem',
+                            fontFamily: titleFont?titleFont:'Arial'
+                        }}
+                    >{title}</span>
                 </div>
                 <div className='layers_widget_2-container-right-content'>
-                    <span>
-                        Lorem Ipsum is simply dummy teen the industry's standard dummy text ever since the 
-                    <br/>
-                    <br/>
-                        Lorem Ipsum is sindustry. Loremard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-                    <br/>
-                    <br/>
-                        scrambled it to make aive centuries, but also the leap into electronic typesetting.
-                    </span>
+                    {
+                        desc.map((el)=>{
+                            return(
+                                <>
+                                    <span
+                                        style={{
+                                            fontFamily: descFont?descFont:'Arial',
+                                            fontSize: descSize?descSize:'1.2rem'
+                                        }}
+                                    >
+                                        {el}
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
-
         </div>
     )
 }

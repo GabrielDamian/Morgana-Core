@@ -16,7 +16,9 @@
 {
     color: gray;
     font-size: 1.2rem;
+    padding: 0px 10px;
 }
+
 .layers_widget_9-container-left-heading-main
 {
     font-size: 2rem;
@@ -38,7 +40,6 @@
 }
 .layers_widget_9-container-left-facilities-header span 
 {
-    border-bottom: 1px solid red;
 }
 .layers_widget_9-container-left-facilities-items
 {
@@ -52,6 +53,7 @@
     display: flex;
     align-items: center;
     width: 33.33%;
+    min-width: 170px;
 }
 .layers_widget_9-container-left-facilities-item-el img 
 {
@@ -63,6 +65,7 @@
 .layers_widget_9-container-right
 {
     width: 50%;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,10 +118,14 @@
 @media only screen and (max-width: 450px){
 .layers_widget_9-container-left
 {
-    padding: 20px;
+    padding: 10px;
 }
 .layers_widget_9-container-left-desc
 {
     font-size: 1.2rem;
+}
+.layers_widget_9-container-left-facilities-item-el
+{
+    min-width: 150px;
 }
 }

@@ -8,8 +8,18 @@ import IconArrowRight from './res/right-arrow.png';
 
 //page intro header
 export default function CoreModule({
-    title,
-    slides
+    slides,
+    dummyHeadline,
+
+    bgImage,
+    
+    titleSize,
+    titleFont,
+    titleColor,
+
+    descSize,
+    descFont,
+    descColor,
 })
 {
     const defaultInterests = slides ? slides : [
@@ -56,7 +66,11 @@ export default function CoreModule({
         
     }
     return (
-        <div className='layers_widget_7-container'>
+        <div
+        style={{
+            backgroundImage: `url(${bgImage})`
+        }}  
+            className='layers_widget_7-container'>
             <div className='layers_widget_7-container-left'>
                 <img className="layers_widget_7-container-left-img1" src={defaultInterests[index]['img1']} alt="atractie"/>
                 <img className="layers_widget_7-container-left-img2" src={defaultInterests[index]['img2']} alt="atractie"/>
@@ -64,15 +78,28 @@ export default function CoreModule({
             <div className='layers_widget_7-container-right'>
                 <div className='layers_widget_7-container-right-title'>
                     <div className='layers_widget_7-container-right-title-header'>
-                        <span>{`[Ce Vedem la Bran]`}</span>
+                        <span>{`[${dummyHeadline}]`}</span>
                     </div>
                     <div className='layers_widget_7-container-right-title-raw'>
-                        <span>{defaultInterests[index]['title']}</span>
+                        <span
+                            style={{
+                                fontSize: titleSize?titleSize:'1.9rem',
+                                fontFamily: titleFont?titleFont:'Arial',
+                                color: titleColor?titleColor:'black'
+                            }}
+                        >{defaultInterests[index]['title']}</span>
                         <br></br>
                         <span>...........</span>
                     </div>
                 </div>
-                <div className='layers_widget_7-container-right-content'>
+                <div 
+                    className='layers_widget_7-container-right-content'
+                    style={{
+                        fontSize: descSize?descSize:'1.4rem',
+                        fontFamily: descFont?descFont:'Arial',
+                        color: descColor?descColor:'black'
+                    }}
+                    >
                     <span>
                     {
                         defaultInterests[index]['desc']

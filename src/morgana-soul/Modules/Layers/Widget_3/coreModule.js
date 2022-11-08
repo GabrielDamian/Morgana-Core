@@ -7,8 +7,13 @@ import DefaultSearchIcon from './res/search.png';
 // npm i react-elastic-carousel
 // npm i styled-components
 
-export default function CoreModule({})
+export default function CoreModule({
+    pictures
+})
 {
+    useEffect(()=>{
+        console.log("pic:", pictures);
+    },[])
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
@@ -16,18 +21,18 @@ export default function CoreModule({})
         { width: 1200, itemsToShow: 4 }
     ];
 
+    const Pictures = pictures ? pictures : [...Array(5).keys()].map((el)=>DefaultImage)
+    
     return (
         <div className='layers_widget_3-container'>
                 <Carousel breakPoints={breakPoints}>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
-                    <Item imageParam={DefaultImage}>1</Item>
+                    {
+                        Pictures.map((el)=>{
+                            return(
+                                <Item imageParam={el}>1</Item>
+                            )
+                        })
+                    }
                 </Carousel>
         </div>
     )

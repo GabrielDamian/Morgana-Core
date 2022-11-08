@@ -46,7 +46,7 @@ export default function CoreModule({
                 }
                 </div>
                 </div>
-        }
+            }
             <div 
                 className='layers_widget_11-container-right'
                 style={{
@@ -61,7 +61,6 @@ export default function CoreModule({
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
-
             </iframe>
 
             </div>

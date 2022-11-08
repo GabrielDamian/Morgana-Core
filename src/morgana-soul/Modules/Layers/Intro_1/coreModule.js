@@ -9,8 +9,13 @@ import DefaultLogoImport from './res/DefaultLogo.png';
 export default function CoreModule({
     slides,
     logoImg,
+
     titleFont,
     headlineFont,
+    
+    titleFontSize,
+    headlineFontSize,
+
     button:Button
 })
 {
@@ -105,8 +110,18 @@ export default function CoreModule({
             </div>
             <div className='layers_intro_1-container-logo-text'>
                 <h1 class={`layers_intro_1-home-title ${revealHideSwitch}`}>
-                  <span className='layers_intro_1-home-title-top' style={{fontFamily: `${titleFont?titleFont:''}`}}>{defaultSlides[slideIndex].top}</span>
-                  <span className='layers_intro_1-home-title-bot' style={{fontFamily: `${headlineFont?headlineFont:''}`}}>{defaultSlides[slideIndex].bot}</span>
+                  <span 
+                    className='layers_intro_1-home-title-top' 
+                    style={{    
+                        fontFamily: `${titleFont?titleFont:''}`,
+                        fontSize: titleFontSize?titleFontSize:'none'
+                        }}>{defaultSlides[slideIndex].top}</span>
+                  <span 
+                    className='layers_intro_1-home-title-bot' 
+                    style={{
+                        fontFamily: `${headlineFont?headlineFont:''}`,
+                        fontSize: headlineFontSize?headlineFontSize:'none'
+                        }}>{defaultSlides[slideIndex].bot}</span>
                 </h1>
             </div>
             <Button />

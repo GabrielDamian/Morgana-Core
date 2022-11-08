@@ -4,7 +4,8 @@ import DefaultBgImage from './res/DefaultImage.jpg';
 
 //page intro header
 export default function CoreModule({
-    title
+    title,
+    bgImage
 })
 {
     useEffect(()=>{
@@ -16,7 +17,7 @@ export default function CoreModule({
     return (
        <div 
         style={{
-            backgroundImage: `url(${DefaultBgImage})`
+            backgroundImage: `url(${bgImage?bgImage:DefaultBgImage})`
         }}
         className='layers_widget_6-container'>
             <span>{title}</span>

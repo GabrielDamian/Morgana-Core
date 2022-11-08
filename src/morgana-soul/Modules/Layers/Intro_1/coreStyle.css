@@ -145,6 +145,10 @@
 {
     font-size: 1.5rem;
 }
+.layers_intro_1-container-logo-text
+{
+    margin-top: 0px;
+}
 }
 
 @media only screen and (max-width: 320px)  {
@@ -160,4 +164,5 @@
 {
     font-size: 1.1rem;
 }
+
 }
