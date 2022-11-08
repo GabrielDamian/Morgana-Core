@@ -1,11 +1,16 @@
 import React,{useState, useEffect} from 'react';
 import './coreStyle.css';
 import DefaultPhoneCall from './res/phone-call.png';
+import DefaultBg from './res/DefaultBg.jpg';
 
 //page intro header
 export default function CoreModule({
+    onlyMap
 })
 {
+    useEffect(()=>{
+        console.log("onlyMap:",onlyMap)
+    },[])
     const DefaultItems = [
         {
             icon: DefaultPhoneCall,
@@ -19,8 +24,15 @@ export default function CoreModule({
         }
     ]
     return (
-        <div className='layers_widget_11-container'>
-            <div className='layers_widget_11-container-left'>
+        <div 
+            className='layers_widget_11-container'
+            style={{
+                backgroundImage: `url(${DefaultBg})`
+            }}
+            >
+            {
+                (onlyMap == true)  ? null :
+                <div className='layers_widget_11-container-left'>
                 <div className='layers_widget_11-container-left-headline'>
                     <span>Contact</span>
                 </div>
@@ -33,8 +45,14 @@ export default function CoreModule({
                     })
                 }
                 </div>
-            </div>
-            <div className='layers_widget_11-container-right'>
+                </div>
+        }
+            <div 
+                className='layers_widget_11-container-right'
+                style={{
+                    width: (onlyMap == true)  ? '100%':null
+                }}
+                >
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44761.66255786637!2d25.494628687025898!3d45.47778233391919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b341820b34c309%3A0xd04b498d5f6d0aa0!2sVilele%20Col%C8%9Bii%20Morarului!5e0!3m2!1sro!2sro!4v1667737240635!5m2!1sro!2sro" 
                 width="100%" 

@@ -9,20 +9,26 @@ import DefaultSearchIcon from './res/search.png';
 
 export default function CoreModule({})
 {
-    const breakPoints = [{ width: 1200, itemsToShow: 4 }];
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 550, itemsToShow: 2 },
+        { width: 768, itemsToShow: 3 },
+        { width: 1200, itemsToShow: 4 }
+    ];
+
     return (
         <div className='layers_widget_3-container'>
-            <Carousel breakPoints={breakPoints}>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-                <Item imageParam={DefaultImage}>1</Item>
-        </Carousel>
+                <Carousel breakPoints={breakPoints}>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                    <Item imageParam={DefaultImage}>1</Item>
+                </Carousel>
         </div>
     )
 }

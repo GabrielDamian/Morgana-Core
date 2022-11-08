@@ -2,6 +2,17 @@
 {
     padding: 30px 50px;
 }
+.layers_widget_3-container-desktop
+{
+    border: 1px solid red;
+    padding: 10px;
+}
+.layers_widget_3-container-mobile 
+{
+    display: none;
+    padding: 10px;
+    border: 1px solid blue;
+}
 .layers_widget_3-item
 {
     display: flex;
@@ -31,3 +42,23 @@
     box-shadow: 0 0 1px 3px #a68554 !important;
 }
 
+/* Mobile */
+@media only screen and (max-width: 500px)  {
+
+.layers_widget_3-container
+{
+    padding: 0px;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.layers_widget_3-container-desktop  
+{
+    display: none;
+}
+.layers_widget_3-container-mobile 
+{
+    display: block;
+}
+
+}

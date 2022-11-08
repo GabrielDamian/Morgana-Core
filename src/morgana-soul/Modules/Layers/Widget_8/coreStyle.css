@@ -2,6 +2,7 @@
 {
     display: flex;
     height: 400px;
+    margin: 30px 0px;
 }
 .layers_widget_8-container-item
 {
@@ -122,4 +123,17 @@
     animation: layers_widget_8-container-lose-opacity 0.6s ease;
     animation-fill-mode: forwards;
     pointer-events:none
+}
+
+/* Mobile */
+@media only screen and (max-width: 900px)  {
+.layers_widget_8-container
+{
+    flex-direction: column;
+    height: 500px;
+}
+.layers_widget_8-container-item
+{
+    width: 100%;
+}
 }

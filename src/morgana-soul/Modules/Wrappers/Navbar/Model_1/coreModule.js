@@ -3,6 +3,7 @@ import './coreStyle.css';
 import MapPinIconDefault from './res/maps-and-flags.svg';
 import PhoneIconDefault from './res/phone-call.svg';
 import LogoTemplate from './res/logo-template.png';
+import { useLocation } from 'react-router-dom'
 
 import hexToCSSFilters from '../../../../core/utils/hexToCSSFilters';
 import {
@@ -40,6 +41,12 @@ export default function CoreModule({
     logoHeight,
 })
 {
+    const location = useLocation();
+    useEffect(()=>{
+        console.log("location updte:",location)
+        setBurgerActive(false);
+    },[location])
+
     useEffect(()=>{
         console.log("links:",links);
     },[])

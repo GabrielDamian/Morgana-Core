@@ -76,7 +76,9 @@ export const core = {
                     containerPadding='10px'
                     logoHeight='50px'   
                 />,
-        footer: <Omnitrix.Module_Wrappers_Footer_1 />,
+        footer: <Omnitrix.Module_Wrappers_Footer_1 
+                    
+        />,
         pages:[
             {
                 url: '/',
@@ -152,13 +154,16 @@ export const core = {
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
                         title="vila-mare"
+                        
                     />,
                     <Omnitrix.Module_Layers_Widget_9
                         title="Apartament 1"
+                        bg={null}
                     />,
                     <Omnitrix.Module_Layers_Widget_5/>,
                     <Omnitrix.Module_Layers_Widget_9
                         title="Apartament 2"
+                        bg={null}
                     />,
                     <Omnitrix.Module_Layers_Widget_5/>,
                 ]
@@ -198,10 +203,28 @@ export const core = {
                     />,
                     <Omnitrix.Module_Layers_Widget_10
                         title="Feature title 1"
+                        headline="Cool head param"
+                        text="Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={null}
+                        img2={null}
+                        invertOrder={true}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
                         title="Feature title 2"
-                    />
+                        headline="2Cool head param"
+                        text="2Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={null}
+                        img2={null}
+                        invertOrder={false}
+                    />,
+                    <Omnitrix.Module_Layers_Widget_10
+                        title="Feature title3"
+                        headline="3Cool head param"
+                        text="3Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
+                        img1={null}
+                        img2={null}
+                        invertOrder={true}
+                    />,
                 ]
             },
             {
@@ -215,7 +238,8 @@ export const core = {
                         title="Contact"
                     />,
                     <Omnitrix.Module_Layers_Widget_11
-
+                        onlyMap={false}
+                        
                     />
                 ]
             }

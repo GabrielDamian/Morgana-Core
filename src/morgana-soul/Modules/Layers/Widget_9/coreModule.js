@@ -2,10 +2,12 @@ import React,{useState, useEffect} from 'react';
 import './coreStyle.css';
 import DefaultImage from './res/DefaultImage.jpg';
 import DefaultCheckedIcon from './res/check.png';
+import DefaultBg from './res/bg1.jpg';
 
 //page intro header
 export default function CoreModule({
-    title
+    title,
+    bg
 })
 {
     const Facilities = [
@@ -19,7 +21,12 @@ export default function CoreModule({
         '4532fwef'
     ]
     return (
-        <div className='layers_widget_9-container'>
+        <div 
+            className='layers_widget_9-container'
+            style={{
+                backgroundImage: `url(${DefaultBg})`
+            }}
+            >
             <div className='layers_widget_9-container-left'>
                 <div className='layers_widget_9-container-left-heading'>
                     <div className='layers_widget_9-container-left-heading-head'>
