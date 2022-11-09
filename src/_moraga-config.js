@@ -93,7 +93,7 @@ export const core = {
                     title={'CONTACT'}
                     titleFont={theme.fonts.font_1}
                     
-                    commText={'Cool text 3'}
+                    commText={'O locatie de poveste'}
                     commTextFont={theme.fonts.font_2}
 
                     logo={images.logo}
@@ -105,27 +105,27 @@ export const core = {
                     items={{
                         left:[
                                 {
-                                    title:"LOCATIE1",
+                                    title:"MAIL",
                                     imageIcon: './img/Acasa/mail.png',
-                                    text:"Baile Felix",
+                                    text:"coltiimorarului@gmail.com",
                                 },
                                 {
-                                    title:"LOCATIE2",
-                                    imageIcon: './img/Acasa/mail.png',
-                                    text:"Baile Felix",
+                                    title:"TELEFON",
+                                    imageIcon: './img/Acasa/phone-call.png',
+                                    text:"+40 759 071 937",
                                 },
                             ],
                         right:
                             [
                                 {
-                                    title:"LOCATIE3",
-                                    imageIcon: './img/Acasa/mail.png',
-                                    text:"Baile Felix",
+                                    title:"FACEBOOK",
+                                    imageIcon: './img/Acasa/facebook.png',
+                                    text:"Vilele Colții Morarului",
                                 },
                                 {
-                                    title:"LOCATIE4",
-                                    imageIcon: './img/Acasa/mail.png',
-                                    text:"Baile Felix",
+                                    title:"LOCATIE",
+                                    imageIcon: './img/Acasa/pin.png',
+                                    text:"Strada Iancu Jianu, Predeal",
                                 },
                             ],
                     }}
@@ -153,17 +153,17 @@ export const core = {
                         slides={[{  
                                     bg: images.bg_1,
                                     top: 'Vilele Colții Morarului',
-                                    bot: 'coold headline here 1'
+                                    bot: 'Un loc de poveste'
                                 },
                                 {  
                                     bg: images.bg_2,
                                     top: 'Vilele Colții Morarului',
-                                    bot: 'coold headline here 2'
+                                    bot: 'Un loc de poveste'
                                 },
                                 {  
                                     bg: images.bg_3,
                                     top: 'Vilele Colții Morarului',
-                                    bot: 'coold headline here 3'
+                                    bot: 'Un loc de poveste'
                                 },
                             ]
                         }
@@ -177,21 +177,21 @@ export const core = {
                         items={[
                             {
                                 title: 'Ciubar',
-                                headline: 'bla bla',
-                                desc: 'more and more and more bla bla bla',
+                                headline: 'Pentru că știm cât de mult contează relaxarea',
+                                desc: 'Pentru că știm cât de mult contează relaxarea',
                                 bg: images.ciubar
                             },
                             {
-                                title: 'Design',
-                                headline: 'bla bla',
-                                desc: 'more and more and more bla bla bla',
+                                title: 'Design Rustic',
+                                headline: 'La noi te vei simți ca acasă',
+                                desc: 'La noi te vei simți ca acasă',
                                 bg: images.design
                             },
                             {
-                                title: 'Gratar',
-                                headline: 'bla bla',
-                                desc: 'more and more and more bla bla bla',
-                                bg: images.ciubar
+                                title: 'Peisaj Superb',
+                                headline: 'Ești inconjurat de frumusețile naturii',
+                                desc: 'Ești inconjurat de frumusețile naturii',
+                                bg: './img/Acasa/peisaj.jpg'
                             }
                         ]}
 
@@ -220,7 +220,7 @@ export const core = {
                                         'aparatament 1',
                                         'aparatament 1',
                                     ],
-                                    textHover: 'It its lato using Content here, content here, making it look like readable English. Many desktop publishing packages and web page edit'
+                                    textHover: 'Vila mare contine un total de x camere fiecare cu baie/fara baie , o bucatarie si ferestre cu privelisti de neuitat.'
                                 },
                                 {
                                     title: 'VILA MICA',
@@ -230,7 +230,7 @@ export const core = {
                                         'aparatament 2',
                                         'aparatament 3',
                                     ],
-                                    textHover: 'Idistribution of lettsed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page edit'
+                                    textHover: 'Vila mica contine un total de x camere fiecare cu baie/fara baie , o bucatarie si ferestre cu privelisti de neuitat.'
                                 },
                             ]
                         }
@@ -252,9 +252,9 @@ export const core = {
                         titleFont={theme.fonts.font_2}
 
                         desc={[
-                            'Lorem Ipsum is simply dumuse in the indutry s standard dummy text ever since the',
-                            'Lorenduply dummy tee the indupeen the induply dummy teen the induply dumeen the induply dummy teen the induply dumeen the induply dummy teen the induply dumeen the induply dummy teen the induply dummy teen the induply dummy teen the industry s standard dummy text ever since the',
-                            'Lorem Ipsum is sy dummy teen  is sy dummy teen  is sy dummy teen  is sy dummy teen the induply dummy teen the induply dummy teen the industry s standard dummy text ever since the',
+                            'Vilele Colții Morarului se află la 2,2 km de pârtia de schi Poliștoaca și oferă cazare cu un lounge comun, o grădină și o recepție deschisă non-stop.',
+                            'Locatia este superba, pozitia ei geografica iti ofera un peisaj de poveste iar aspectul vilei este unul vintage.',
+                            'Apartamentele sunt incapatoare cu o terasa superba cu vedere spre munte ,curat ,mobilat cu stil ,parcare privata,toate facilitatile necesare , deasemeni la parter se afla o sala living destul de spatioasa cu bucatarie',
                         ]}
                         descSize={'1.1rem'}
                         descFont={theme.fonts.font_1}
@@ -280,47 +280,47 @@ export const core = {
                         ]}
                     
                     />,
-                    <Omnitrix.Module_Layers_Widget_4
-                        title={'FACILITATI'}
-                        titleSize={'2.5rem'}
-                        titleFont={theme.fonts.font_1}
-                        titleColor={theme.colors.color_4}
+                    // <Omnitrix.Module_Layers_Widget_4
+                    //     title={'FACILITATI'}
+                    //     titleSize={'2.5rem'}
+                    //     titleFont={theme.fonts.font_1}
+                    //     titleColor={theme.colors.color_4}
 
-                        topIcon={'./img/Acasa/abstract.png'}
-                        topIconColor={theme.colors.color_2}
-                        separatorColor={theme.colors.color_2}
+                    //     topIcon={'./img/Acasa/abstract.png'}
+                    //     topIconColor={theme.colors.color_2}
+                    //     separatorColor={theme.colors.color_2}
 
-                        items={[
-                            {
-                                icon: './img/Acasa/facility-item.jpg',
-                                title: 'Restaurant1',
-                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
-                            },
-                            {
-                                icon: './img/Acasa/facility-item.jpg',
-                                title: 'Restaurant2',
-                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
-                            },
-                            {
-                                icon: './img/Acasa/facility-item.jpg',
-                                title: 'Restaurant3',
-                                desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
-                            },
-                        ]}
+                    //     items={[
+                    //         {
+                    //             icon: './img/Acasa/facility-item.jpg',
+                    //             title: 'Restaurant1',
+                    //             desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                    //         },
+                    //         {
+                    //             icon: './img/Acasa/facility-item.jpg',
+                    //             title: 'Restaurant2',
+                    //             desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                    //         },
+                    //         {
+                    //             icon: './img/Acasa/facility-item.jpg',
+                    //             title: 'Restaurant3',
+                    //             desc: 'Camerele sunt dotate cu tot ce trebuie ca sa va asiguram confortul necesar.'
+                    //         },
+                    //     ]}
 
-                        itemsIconColor={theme.colors.color_2}
+                    //     itemsIconColor={theme.colors.color_2}
                         
-                        itemsTitleFont={theme.fonts.font_2}
-                        itemsTitleColor={theme.colors.color_3}
-                        itemsTitleSize={'2.2rem'}
+                    //     itemsTitleFont={theme.fonts.font_2}
+                    //     itemsTitleColor={theme.colors.color_3}
+                    //     itemsTitleSize={'2.2rem'}
 
-                        itemsDescColor={theme.colors.color_3}
-                        itemsDescFont={theme.fonts.font_1}
-                        itemsDescSize={'1rem'}
+                    //     itemsDescColor={theme.colors.color_3}
+                    //     itemsDescFont={theme.fonts.font_1}
+                    //     itemsDescSize={'1rem'}
 
-                        bgImage={'./img/Acasa/facilitati-bg.jpg'}
+                    //     bgImage={'./img/Acasa/facilitati-bg.jpg'}
                     
-                    />,
+                    // />,
                     <Omnitrix.Module_Layers_Widget_7
                         slides = {[
                             {
@@ -354,7 +354,7 @@ export const core = {
             {
                 url: '/gallery',
                 metadata: {
-                    title: 'Page 2 title',
+                    title: 'Galerie',
                     desc: 'Page 2 description'
                 },
                 components: [
@@ -394,23 +394,77 @@ export const core = {
                                 width: 250,
                                 height: 220,
                             },
+
+
                             {
-                                src: './img/Acasa/gal_3.jpg',
+                                src: './img/Acasa/bg-1.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/bg-2.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/bg-3.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/facilitati-bg-top.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/vila-mare.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+
+
+                            {
+                                src: './img/Acasa/gal_7.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_8.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_9.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_10.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_11.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_12.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_13.jpg',
+                                width: 250,
+                                height: 220,
+                            },
+                            {
+                                src: './img/Acasa/gal_14.jpg',
                                 width: 220,
                                 height: 220,
                             },
                             {
-                                src: './img/Acasa/gal_4.jpg',
-                                width: 250,
-                                height: 220,
-                            },
-                            {
-                                src: './img/Acasa/gal_5.jpg',
-                                width: 250,
-                                height: 220,
-                            },
-                            {
-                                src: './img/Acasa/gal_6.jpg',
+                                src: './img/Acasa/gal_15.jpg',
                                 width: 250,
                                 height: 220,
                             },
@@ -423,31 +477,31 @@ export const core = {
             {
                 url: '/vila-mare',
                 metadata: {
-                    title: 'Page 3 title',
+                    title: 'Vila Mare',
                     desc: 'Page 3 description'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
-                        title="vila-mare"
-                        bgImage={'./img/Acasa/gal_2.jpg'}
+                        title="VILA MARE"
+                        bgImage={'./img/Acasa/vila-mare.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_9
 
                         bgImage={'./img/Acasa/camere-bg.jpg'}
-                        img1={'./img/Acasa/gal_2.jpg'}
-                        img2={'./img/Acasa/gal_2.jpg'}
+                        img1={'./img/Acasa/gal_7.jpg'}
+                        img2={'./img/Acasa/gal_7.jpg'}
 
-                        headline={"1Cool headline here"}
+                        headline={"Apartamentul Ventrum"}
                         headlineFont={theme.fonts.font_1}
                         headlineSize={'1.1rem'}
                         headlineColor={'gray'}
                         
-                        title="Apartament 1"
+                        title="Ventrum"
                         titleFont={theme.fonts.font_2}
                         titleSize={'1.8rem'}
                         titleColor={theme.colors.color_1}
                         
-                        content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                        content={"Apartamentul se afla la mansarda vilei. Are doua dormitoare , living cu kichineta, terasa acoperita cu gratar si o priveliste superba catre Muntii Bucegi."}
                         contentFont={theme.fonts.font_1}
                         contentSize={"1.1rem"}
                         contentColor={theme.colors.color_1}
@@ -459,11 +513,13 @@ export const core = {
                         underlineColor={theme.colors.color_2}
 
                         featuresItems={[
-                            'asdasad',
-                            '23423234234',
-                            '3fefgdfgd',
-                            'asdasad',
-                            '23423234234',
+                            'Zonă de picnic',
+                            'Terasă/grădină',
+                            'Grătar',
+                            'Bucătărie comună',
+                            'Wi-Fi',
+                            'Parcare',
+                            'Camere de familie',
                         ]}
 
                         featuresItemsFont={theme.fonts.font_1}
@@ -474,12 +530,12 @@ export const core = {
                     <Omnitrix.Module_Layers_Widget_5
                         imagesProps={[
                             {
-                                src: './img/Acasa/gal_1.jpg',
-                                width: 250,
+                                src: './img/Acasa/gal_3.jpg',
+                                width: 200,
                                 height: 220,
                             },
                             {
-                                src: './img/Acasa/gal_2.jpg',
+                                src: './img/Acasa/gal_6.jpg',
                                 width: 200,
                                 height: 220,
                             },
@@ -489,61 +545,40 @@ export const core = {
                                 height: 220,
                             },
                             {
-                                src: './img/Acasa/gal_4.jpg',
+                                src: './img/Acasa/gal_7.jpg',
                                 width: 250,
                                 height: 220,
                             },
                             {
-                                src: './img/Acasa/gal_5.jpg',
+                                src: './img/Acasa/gal_8.jpg',
                                 width: 250,
                                 height: 220,
                             },
                             {
-                                src: './img/Acasa/gal_6.jpg',
+                                src: './img/Acasa/pres_1.jpg',
                                 width: 250,
                                 height: 220,
                             },
-                            {
-                                src: './img/Acasa/gal_3.jpg',
-                                width: 220,
-                                height: 220,
-                            },
-                            {
-                                src: './img/Acasa/gal_4.jpg',
-                                width: 250,
-                                height: 220,
-                            },
-                            {
-                                src: './img/Acasa/gal_5.jpg',
-                                width: 250,
-                                height: 220,
-                            },
-                            {
-                                src: './img/Acasa/gal_6.jpg',
-                                width: 250,
-                                height: 220,
-                            },
-
                         ]}
                         defaultValues={false}
                     />,
                     <Omnitrix.Module_Layers_Widget_9
 
                     bgImage={'./img/Acasa/camere-bg.jpg'}
-                    img1={'./img/Acasa/gal_2.jpg'}
-                    img2={'./img/Acasa/gal_2.jpg'}
+                    img1={'./img/Acasa/gal_8.jpg'}
+                    img2={'./img/Acasa/gal_8.jpg'}
 
-                    headline={"2Cool headline here"}
+                    headline={"Apartament Aqua"}
                     headlineFont={theme.fonts.font_1}
                     headlineSize={'1.1rem'}
                     headlineColor={'gray'}
                     
-                    title="Apartament 1"
+                    title="Aqua"
                     titleFont={theme.fonts.font_2}
                     titleSize={'1.8rem'}
                     titleColor={theme.colors.color_1}
                     
-                    content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                    content={"Apartamentul Aqua este structurat astfel : doua dormitoare , living cu acvariu și kichineta , o baie și terasa acoperită cu grătar"}
                     contentFont={theme.fonts.font_1}
                     contentSize={"1.1rem"}
                     contentColor={theme.colors.color_1}
@@ -555,12 +590,13 @@ export const core = {
                     underlineColor={theme.colors.color_2}
 
                     featuresItems={[
-                        'asdasad',
-                        '23423234234',
-                        '3fefgdfgd',
-                        'asdasad',
-                        '23423234234',
-                        '3fefgdfgd',
+                        'Zonă de picnic',
+                        'Terasă/grădină',
+                        'Grătar',
+                        'Bucătărie comună',
+                        'Wi-Fi',
+                        'Parcare',
+                        'Camere de familie',
                     ]}
 
                     featuresItemsFont={theme.fonts.font_1}
@@ -571,52 +607,32 @@ export const core = {
                 <Omnitrix.Module_Layers_Widget_5
                     imagesProps={[
                         {
-                            src: './img/Acasa/gal_1.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_2.jpg',
+                            src: './img/Acasa/gal_3.jpg',
                             width: 200,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_3.jpg',
-                            width: 220,
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 200,
                             height: 220,
                         },
                         {
                             src: './img/Acasa/gal_4.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_5.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_6.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_3.jpg',
                             width: 220,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_4.jpg',
+                            src: './img/Acasa/gal_7.jpg',
                             width: 250,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_5.jpg',
+                            src: './img/Acasa/gal_8.jpg',
                             width: 250,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_6.jpg',
+                            src: './img/Acasa/pres_1.jpg',
                             width: 250,
                             height: 220,
                         },
@@ -629,31 +645,31 @@ export const core = {
             {
                 url: '/vila-mica',
                 metadata: {
-                    title: 'Page 3 title',
+                    title: 'Vila Mica',
                     desc: 'Page 3 description'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
-                        title="vila-mica"
-                        bgImage={'./img/Acasa/gal_3.jpg'}
+                        title="VILA MICA"
+                        bgImage={'./img/Acasa/bg-3.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_9
 
                     bgImage={'./img/Acasa/camere-bg.jpg'}
-                    img1={'./img/Acasa/gal_2.jpg'}
-                    img2={'./img/Acasa/gal_2.jpg'}
+                    img1={'./img/Acasa/gal_8.jpg'}
+                    img2={'./img/Acasa/gal_8.jpg'}
 
-                    headline={"3Cool headline here"}
+                    headline={"Apartament Aqua"}
                     headlineFont={theme.fonts.font_1}
                     headlineSize={'1.1rem'}
                     headlineColor={'gray'}
                     
-                    title="Apartament 1"
+                    title="Aqua"
                     titleFont={theme.fonts.font_2}
                     titleSize={'1.8rem'}
                     titleColor={theme.colors.color_1}
                     
-                    content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
+                    content={"Apartamentul Aqua este structurat astfel : doua dormitoare , living cu acvariu și kichineta , o baie și terasa acoperită cu grătar"}
                     contentFont={theme.fonts.font_1}
                     contentSize={"1.1rem"}
                     contentColor={theme.colors.color_1}
@@ -665,12 +681,13 @@ export const core = {
                     underlineColor={theme.colors.color_2}
 
                     featuresItems={[
-                        'asdasad',
-                        '23423234234',
-                        '3fefgdfgd',
-                        'asdasad',
-                        '23423234234',
-                        '3fefgdfgd',
+                        'Zonă de picnic',
+                        'Terasă/grădină',
+                        'Grătar',
+                        'Bucătărie comună',
+                        'Wi-Fi',
+                        'Parcare',
+                        'Camere de familie',
                     ]}
 
                     featuresItemsFont={theme.fonts.font_1}
@@ -681,12 +698,90 @@ export const core = {
                 <Omnitrix.Module_Layers_Widget_5
                     imagesProps={[
                         {
-                            src: './img/Acasa/gal_1.jpg',
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 200,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
+                            width: 200,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_4.jpg',
+                            width: 220,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_7.jpg',
                             width: 250,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_2.jpg',
+                            src: './img/Acasa/gal_8.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/pres_1.jpg',
+                            width: 250,
+                            height: 220,
+                        },
+
+                    ]}
+                    defaultValues={false}
+                />,
+                    <Omnitrix.Module_Layers_Widget_9
+
+                    bgImage={'./img/Acasa/camere-bg.jpg'}
+                    img1={'./img/Acasa/gal_7.jpg'}
+                    img2={'./img/Acasa/gal_7.jpg'}
+
+                    headline={"Apartamentul Ventrum"}
+                    headlineFont={theme.fonts.font_1}
+                    headlineSize={'1.1rem'}
+                    headlineColor={'gray'}
+                    
+                    title="Ventrum"
+                    titleFont={theme.fonts.font_2}
+                    titleSize={'1.8rem'}
+                    titleColor={theme.colors.color_1}
+                    
+                    content={"Apartamentul se afla la mansarda vilei. Are doua dormitoare , living cu kichineta, terasa acoperita cu gratar si o priveliste superba catre Muntii Bucegi."}
+                    contentFont={theme.fonts.font_1}
+                    contentSize={"1.1rem"}
+                    contentColor={theme.colors.color_1}
+
+                    features="Facilitati 1"
+                    featuresFont={theme.fonts.font_1}
+                    featuresSize={'1.2rem'}
+                    featuresColor={theme.colors.color_1}
+                    underlineColor={theme.colors.color_2}
+
+                    featuresItems={[
+                        'Zonă de picnic',
+                        'Terasă/grădină',
+                        'Grătar',
+                        'Bucătărie comună',
+                        'Wi-Fi',
+                        'Parcare',
+                        'Camere de familie',
+                    ]}
+
+                    featuresItemsFont={theme.fonts.font_1}
+                    featuresItemsSize={'1rem'}
+                    featuresItemsColor={theme.colors.color_1}
+
+                />,
+                <Omnitrix.Module_Layers_Widget_5
+                    imagesProps={[
+                        {
+                            src: './img/Acasa/gal_3.jpg',
+                            width: 200,
+                            height: 220,
+                        },
+                        {
+                            src: './img/Acasa/gal_6.jpg',
                             width: 200,
                             height: 220,
                         },
@@ -696,163 +791,45 @@ export const core = {
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_4.jpg',
+                            src: './img/Acasa/gal_7.jpg',
                             width: 250,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_5.jpg',
+                            src: './img/Acasa/gal_8.jpg',
                             width: 250,
                             height: 220,
                         },
                         {
-                            src: './img/Acasa/gal_6.jpg',
+                            src: './img/Acasa/pres_1.jpg',
                             width: 250,
                             height: 220,
                         },
-                        {
-                            src: './img/Acasa/gal_3.jpg',
-                            width: 220,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_4.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_5.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_6.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-
                     ]}
                     defaultValues={false}
                 />,
-                <Omnitrix.Module_Layers_Widget_9
-
-                bgImage={'./img/Acasa/camere-bg.jpg'}
-                img1={'./img/Acasa/gal_2.jpg'}
-                img2={'./img/Acasa/gal_2.jpg'}
-
-                headline={"4Cool headline here"}
-                headlineFont={theme.fonts.font_1}
-                headlineSize={'1.1rem'}
-                headlineColor={'gray'}
-                
-                title="Apartament 1"
-                titleFont={theme.fonts.font_2}
-                titleSize={'1.8rem'}
-                titleColor={theme.colors.color_1}
-                
-                content={"It is a long established fact that a  long established fact that a  long established fact that a  long established fact that a reader will be distracted by the readable content of a "}
-                contentFont={theme.fonts.font_1}
-                contentSize={"1.1rem"}
-                contentColor={theme.colors.color_1}
-
-                features="Facilitati 1"
-                featuresFont={theme.fonts.font_1}
-                featuresSize={'1.2rem'}
-                featuresColor={theme.colors.color_1}
-                underlineColor={theme.colors.color_2}
-
-                featuresItems={[
-                    'asdasad',
-                    '23423234234',
-                    '3fefgdfgd',
-                    'asdasad',
-                    'asdasad',
-                    '23423234234',
-                    '3fefgdfgd',
-                ]}
-
-                featuresItemsFont={theme.fonts.font_1}
-                featuresItemsSize={'1.1rem'}
-                featuresItemsColor={theme.colors.color_1}
-
-            />,
-            <Omnitrix.Module_Layers_Widget_5
-                imagesProps={[
-                    {
-                        src: './img/Acasa/gal_1.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_2.jpg',
-                        width: 200,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_3.jpg',
-                        width: 220,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_4.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_5.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_6.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_3.jpg',
-                        width: 220,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_4.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_5.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-                    {
-                        src: './img/Acasa/gal_6.jpg',
-                        width: 250,
-                        height: 220,
-                    },
-
-                ]}
-                defaultValues={false}
-            />
+               
                 ]
             },
             {
                 url: '/facilitati',
                 metadata: {
-                    title: 'Page 3 title',
-                    desc: 'Page 3 description'
+                    title: 'Facilitati',
+                    desc: 'Facilitati'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
-                        title="facilitati"
-                        bgImage={'./img/Acasa/gal_4.jpg'}
+                        title="FACILITĂȚI"
+                        bgImage={'./img/Acasa/facilitati-bg-top.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="11 Feature title 1"
+                        title="Ciubar"
                         titleFont={theme.fonts.font_1}
                         titleFontSize={'1.7rem'}
                         undelineBorderColor={theme.colors.color_2}
                         titleColor={theme.colors.color_1}
 
-                        headline="11 Cool head param 11"
+                        headline="Ciubar"
                         headlineFont={theme.fonts.font_1}
                         headlineSize={'1.2rem'}
 
@@ -860,20 +837,20 @@ export const core = {
                         contentSize={'1.3rem'}
                         contentColor={theme.colors.color_1}
                         
-                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={'./img/Acasa/gal_4.jpg'}
-                        img2={'./img/Acasa/gal_4.jpg'}
+                        text="Pentru că știm cât de mult contează relaxarea"
+                        img1={'./img/Acasa/ciubar.jpg'}
+                        img2={'./img/Acasa/ciubar.jpg'}
                         invertOrder={true}
-                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
+                        bgImg={'./img/Acasa/feature_1.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="11 Feature title 1"
+                        title="Design Rustic"
                         titleFont={theme.fonts.font_1}
                         titleFontSize={'1.7rem'}
                         undelineBorderColor={theme.colors.color_2}
                         titleColor={theme.colors.color_1}
 
-                        headline="11 Cool head param 11"
+                        headline="Design Rustic"
                         headlineFont={theme.fonts.font_1}
                         headlineSize={'1.2rem'}
 
@@ -881,20 +858,20 @@ export const core = {
                         contentSize={'1.3rem'}
                         contentColor={theme.colors.color_1}
                         
-                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={'./img/Acasa/gal_4.jpg'}
-                        img2={'./img/Acasa/gal_4.jpg'}
+                        text="La noi te vei simți ca acasă"
+                        img1={'./img/Acasa/design.jpg'}
+                        img2={'./img/Acasa/design.jpg'}
                         invertOrder={false}
-                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
+                        bgImg={'./img/Acasa/feature_2.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="11 Feature title 1"
+                        title="Peisaj Superb"
                         titleFont={theme.fonts.font_1}
                         titleFontSize={'1.7rem'}
                         undelineBorderColor={theme.colors.color_2}
                         titleColor={theme.colors.color_1}
 
-                        headline="11 Cool head param 11"
+                        headline="Peisaj Superb"
                         headlineFont={theme.fonts.font_1}
                         headlineSize={'1.2rem'}
 
@@ -902,18 +879,19 @@ export const core = {
                         contentSize={'1.3rem'}
                         contentColor={theme.colors.color_1}
                         
-                        text="11 Sezonul cald se petrece afară, alături de toți cei dragi. Gândește-te cum ar arăta weekendurile in familie, savurând mancarea preferată, preparată chiar p"
-                        img1={'./img/Acasa/gal_4.jpg'}
-                        img2={'./img/Acasa/gal_4.jpg'}
+                        text="Ești inconjurat de frumusețile naturii
+                        "
+                        img1={'./img/Acasa/gal_1.jpg'}
+                        img2={'./img/Acasa/gal_1.jpg'}
                         invertOrder={true}
-                        bgImg={'./img/Acasa/bg-facilitati.jpg'}
+                        bgImg={'./img/Acasa/feature_3.jpg'}
                     />,
                 ]
             },
             {
                 url: '/contact',
                 metadata: {
-                    title: 'Page 3 title',
+                    title: 'Contact',
                     desc: 'Page 3 description'
                 },
                 components: [
@@ -922,7 +900,7 @@ export const core = {
                         bgImage={'./img/Acasa/gal_5.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_11
-                        onlyMap={false}
+                        onlyMap={true}
                         
                     />
                 ]

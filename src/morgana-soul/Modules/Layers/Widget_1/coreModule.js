@@ -28,6 +28,7 @@ export default function CoreModule(props)
 
     return (
         <div 
+            id="widget_1_ref"
             className='layers_widget_1-container'
             style={{
                 backgroundImage: `url(${DefaultBackground})`

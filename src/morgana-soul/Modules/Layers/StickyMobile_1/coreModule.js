@@ -11,11 +11,15 @@ export default function CoreModule({
     iconsColor
 })
 {
+    // TO DELETE
+    const tempRedirect = ()=>{
+        window.location = 'https://www.facebook.com/VileleColtiiMorarului/'
+    }
     return (
         <div className='layers_stickymobile_1-container'>
             <div className='layers_stickymobile_1-container-social'>
                 <img className='layers_stickymobile_1-container-social-default' src={DefaultSocialFb} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}}/>
-                <img className='layers_stickymobile_1-container-social-elem' src={DefaultSocialFb} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}}/>
+                <img className='layers_stickymobile_1-container-social-elem' src={DefaultSocialFb} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}} onClick={tempRedirect}/>
                 <img className='layers_stickymobile_1-container-social-elem' src={DefaultSocialIg} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}}/>
                 <img className='layers_stickymobile_1-container-social-elem' src={DefaultSocialYt} style={{filter: iconsColor?`${hexToCSSFilters(iconsColor)}`:`none`}}/>
             </div>

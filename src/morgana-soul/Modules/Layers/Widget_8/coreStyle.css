@@ -2,7 +2,6 @@
 {
     display: flex;
     height: 400px;
-    margin: 30px 0px;
 }
 .layers_widget_8-container-item
 {
@@ -15,6 +14,10 @@
     align-items: center;
     color: white;
     position: relative;
+    border-top: 3px solid #d8b774;
+    border-bottom: 3px solid #d8b774;
+    /* border-left: 2px solid #d8b774; */
+    border-right: 3px solid #d8b774;
 }
 
 .layers_widget_8-container-item:hover .layers_widget_8-container-item-desc
