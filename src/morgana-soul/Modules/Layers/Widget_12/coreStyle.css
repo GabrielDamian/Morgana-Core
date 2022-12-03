@@ -1,0 +1,27 @@
+.layers_widget_12-container
+{
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+}
+.layers_widget_12-container img 
+{
+    width: 40%;
+    object-fit: contain;
+    height: 400px;
+}
+@media only screen and (max-width: 600px)  {
+.layers_widget_12-container
+{
+    flex-direction: column;
+    padding: 10px;
+}
+.layers_widget_12-container img 
+{
+    width: 90%;
+}
+}

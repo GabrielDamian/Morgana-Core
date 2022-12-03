@@ -4,8 +4,8 @@ import {Omnitrix} from './morgana-soul/core/modulesHandler';
 
 // define theme
 const theme = new Theme()
-theme.initFonts(`'Karla', sans-serif`,`'Zen Antique', serif`,null)
-theme.initColors('#313131','#d8b774','#f8f8f8')//black, gold, white
+theme.initFonts(`'Ubuntu', sans-serif`,`'Libre Baskerville', serif`,null)
+theme.initColors('#3c3c3b','#469422','#f0f0f0')//black, gold, white
 
 // resources (images) from static folder
 const images = { //custom obj per build
@@ -26,15 +26,15 @@ const images = { //custom obj per build
 
 // define pages
 export const core = {
-    websiteName: 'templatTest',
-    description: 'templateDesc',
+    websiteName: 'Vila Colț de Rai',
+    description: 'Vila Colț de Rai',
     content:{
         appBar: <Omnitrix.Module_Wrappers_Navbar_1
                     mapIcon={null} //svg ref
-                    locationName='Predeal' //string
+                    locationName='Râșnov,' //string
                     
                     phoneIcon={null} //svg ref
-                    phoneName='+40 759 071 937'
+                    phoneName='+40 760 511 111'
 
                     iconsColor={theme.colors.color_2} //ex: dd9a34, without '#'
 
@@ -44,7 +44,7 @@ export const core = {
                     fontColor="white" //ex: red, hex, rgba
                     fontColorOnScroll={'black'} 
 
-                    bgFirstColor={'rgba(49, 49, 49, 0.8)'}
+                    bgFirstColor={'rgba(49, 49, 49, 0.6)'}
                     bgColorOnScroll= {theme.colors.color_3}
 
                     mobileFontSize={'1.3rem'}
@@ -59,7 +59,7 @@ export const core = {
                             
                             {
                                 name: 'Galerie',
-                                ref: '/gallery'
+                                ref: '/galerie'
                             },
                             {
                                 name: 'Facilități',
@@ -68,13 +68,10 @@ export const core = {
                         ],
                         right:[
                             {
-                                name: 'Vila Mare',
-                                ref: '/vila-mare'
+                                name: 'Camere',
+                                ref: '/camere'
                             },
-                            {
-                                name: 'Vila Mică ',
-                                ref: '/vila-mica'
-                            },
+                            
                             {
                                 name: 'Contact',
                                 ref: '/contact'
@@ -82,8 +79,8 @@ export const core = {
                         ]
                     }}
 
-                    logo={images.logo}
-                    hoverAnim={8} //range(1,8)
+                    logo={ './img/logo.png'}
+                    hoverAnim={3} //range(1,8)
                     borderBottom={`${theme.colors.color_2}`} //color with #
 
                     containerPadding='10px'
@@ -96,7 +93,7 @@ export const core = {
                     commText={'O locatie de poveste'}
                     commTextFont={theme.fonts.font_2}
 
-                    logo={images.logo}
+                    logo={'./img/logo.png'}
                     bg={null}
 
                     iconsColor={theme.colors.color_2}
@@ -142,7 +139,7 @@ export const core = {
                     <Omnitrix.Module_Layers_Intro_1 
                         //TODO: set up callback for scroll on button click
                         button={Omnitrix.Atom_Buttons_Btn_1}
-                        logoImg={images.logo}
+                        logoImg={'./img/logo.png'}
 
                         titleFont={theme.fonts.font_2}
                         headlineFont={theme.fonts.font_1}
@@ -151,19 +148,19 @@ export const core = {
                         headlineFontSize={'1.3rem'}
                         
                         slides={[{  
-                                    bg: images.bg_1,
-                                    top: 'Vilele Colții Morarului',
-                                    bot: 'Un loc de poveste'
+                                    bg: './img/bgs/bg_1.jpg',
+                                    top: 'Vila Colț de Rai',
+                                    bot: 'O vacanța de poveste'
                                 },
                                 {  
-                                    bg: images.bg_2,
-                                    top: 'Vilele Colții Morarului',
-                                    bot: 'Un loc de poveste'
+                                    bg: './img/bgs/bg_2.jpg',
+                                    top: 'Vila Colț de Rai',
+                                    bot: 'O vacanța de poveste'
                                 },
                                 {  
-                                    bg: images.bg_3,
-                                    top: 'Vilele Colții Morarului',
-                                    bot: 'Un loc de poveste'
+                                    bg: './img/bgs/bg_3.jpg',
+                                    top: 'Vila Colț de Rai',
+                                    bot: 'O vacanța de poveste'
                                 },
                             ]
                         }
@@ -259,14 +256,37 @@ export const core = {
                         descSize={'1.1rem'}
                         descFont={theme.fonts.font_1}
 
-                        img1={images.presentation_2}
-                        img2={images.presentation_1}
+                        img1={ './img/bgs/wid_1.jpg'}
+                        img2={'./img/bgs/wid_2.jpg'}
 
                         bgLeft={null}
                         bgRight={images.presentation_bg}
 
                         invertOrder={true}
                     />,
+
+                    <Omnitrix.Module_Layers_Widget_2
+                        title={"Despre Coltii Morarului"}
+                        titleSize={'1.9rem'}
+                        titleFont={theme.fonts.font_2}
+
+                        desc={[
+                            'Vilele Colții Morarului se află la 2,2 km de pârtia de schi Poliștoaca și oferă cazare cu un lounge comun, o grădină și o recepție deschisă non-stop.',
+                            'Locatia este superba, pozitia ei geografica iti ofera un peisaj de poveste iar aspectul vilei este unul vintage.',
+                            'Apartamentele sunt incapatoare cu o terasa superba cu vedere spre munte ,curat ,mobilat cu stil ,parcare privata,toate facilitatile necesare , deasemeni la parter se afla o sala living destul de spatioasa cu bucatarie',
+                        ]}
+                        descSize={'1.1rem'}
+                        descFont={theme.fonts.font_1}
+
+                        img1={ './img/bgs/wid_3.jpg'}
+                        img2={'./img/bgs/wid_4.jpg'}
+
+                        bgLeft={null}
+                        bgRight={images.presentation_bg}
+
+                        invertOrder={true}
+                    />,
+
                     <Omnitrix.Module_Layers_Widget_3
                         pictures={[
                             './img/Acasa/gal_1.jpg',
@@ -352,7 +372,7 @@ export const core = {
                 ]
             },
             {
-                url: '/gallery',
+                url: '/galerie',
                 metadata: {
                     title: 'Galerie',
                     desc: 'Page 2 description'
@@ -394,8 +414,6 @@ export const core = {
                                 width: 250,
                                 height: 220,
                             },
-
-
                             {
                                 src: './img/Acasa/bg-1.jpg',
                                 width: 250,
@@ -475,7 +493,7 @@ export const core = {
                 ]
             },
             {
-                url: '/vila-mare',
+                url: '/camere',
                 metadata: {
                     title: 'Vila Mare',
                     desc: 'Page 3 description'
@@ -643,172 +661,20 @@ export const core = {
                 ]
             },
             {
-                url: '/vila-mica',
+                url: '/contact',
                 metadata: {
-                    title: 'Vila Mica',
+                    title: 'Contact',
                     desc: 'Page 3 description'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
-                        title="VILA MICA"
-                        bgImage={'./img/Acasa/bg-3.jpg'}
+                        title="Contact"
+                        bgImage={'./img/Acasa/gal_5.jpg'}
                     />,
-                    <Omnitrix.Module_Layers_Widget_9
-
-                    bgImage={'./img/Acasa/camere-bg.jpg'}
-                    img1={'./img/Acasa/gal_8.jpg'}
-                    img2={'./img/Acasa/gal_8.jpg'}
-
-                    headline={"Apartament Aqua"}
-                    headlineFont={theme.fonts.font_1}
-                    headlineSize={'1.1rem'}
-                    headlineColor={'gray'}
-                    
-                    title="Aqua"
-                    titleFont={theme.fonts.font_2}
-                    titleSize={'1.8rem'}
-                    titleColor={theme.colors.color_1}
-                    
-                    content={"Apartamentul Aqua este structurat astfel : doua dormitoare , living cu acvariu și kichineta , o baie și terasa acoperită cu grătar"}
-                    contentFont={theme.fonts.font_1}
-                    contentSize={"1.1rem"}
-                    contentColor={theme.colors.color_1}
-
-                    features="Facilitati 1"
-                    featuresFont={theme.fonts.font_1}
-                    featuresSize={'1.2rem'}
-                    featuresColor={theme.colors.color_1}
-                    underlineColor={theme.colors.color_2}
-
-                    featuresItems={[
-                        'Zonă de picnic',
-                        'Terasă/grădină',
-                        'Grătar',
-                        'Bucătărie comună',
-                        'Wi-Fi',
-                        'Parcare',
-                        'Camere de familie',
-                    ]}
-
-                    featuresItemsFont={theme.fonts.font_1}
-                    featuresItemsSize={'1.1rem'}
-                    featuresItemsColor={theme.colors.color_1}
-
-                />,
-                <Omnitrix.Module_Layers_Widget_5
-                    imagesProps={[
-                        {
-                            src: './img/Acasa/gal_3.jpg',
-                            width: 200,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_6.jpg',
-                            width: 200,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_4.jpg',
-                            width: 220,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_7.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_8.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/pres_1.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-
-                    ]}
-                    defaultValues={false}
-                />,
-                    <Omnitrix.Module_Layers_Widget_9
-
-                    bgImage={'./img/Acasa/camere-bg.jpg'}
-                    img1={'./img/Acasa/gal_7.jpg'}
-                    img2={'./img/Acasa/gal_7.jpg'}
-
-                    headline={"Apartamentul Ventrum"}
-                    headlineFont={theme.fonts.font_1}
-                    headlineSize={'1.1rem'}
-                    headlineColor={'gray'}
-                    
-                    title="Ventrum"
-                    titleFont={theme.fonts.font_2}
-                    titleSize={'1.8rem'}
-                    titleColor={theme.colors.color_1}
-                    
-                    content={"Apartamentul se afla la mansarda vilei. Are doua dormitoare , living cu kichineta, terasa acoperita cu gratar si o priveliste superba catre Muntii Bucegi."}
-                    contentFont={theme.fonts.font_1}
-                    contentSize={"1.1rem"}
-                    contentColor={theme.colors.color_1}
-
-                    features="Facilitati 1"
-                    featuresFont={theme.fonts.font_1}
-                    featuresSize={'1.2rem'}
-                    featuresColor={theme.colors.color_1}
-                    underlineColor={theme.colors.color_2}
-
-                    featuresItems={[
-                        'Zonă de picnic',
-                        'Terasă/grădină',
-                        'Grătar',
-                        'Bucătărie comună',
-                        'Wi-Fi',
-                        'Parcare',
-                        'Camere de familie',
-                    ]}
-
-                    featuresItemsFont={theme.fonts.font_1}
-                    featuresItemsSize={'1rem'}
-                    featuresItemsColor={theme.colors.color_1}
-
-                />,
-                <Omnitrix.Module_Layers_Widget_5
-                    imagesProps={[
-                        {
-                            src: './img/Acasa/gal_3.jpg',
-                            width: 200,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_6.jpg',
-                            width: 200,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_3.jpg',
-                            width: 220,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_7.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/gal_8.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                        {
-                            src: './img/Acasa/pres_1.jpg',
-                            width: 250,
-                            height: 220,
-                        },
-                    ]}
-                    defaultValues={false}
-                />,
-               
+                    <Omnitrix.Module_Layers_Widget_11
+                        onlyMap={true}
+                        
+                    />
                 ]
             },
             {
@@ -844,13 +710,13 @@ export const core = {
                         bgImg={'./img/Acasa/feature_1.jpg'}
                     />,
                     <Omnitrix.Module_Layers_Widget_10
-                        title="Design Rustic"
+                        title="Design Divers"
                         titleFont={theme.fonts.font_1}
                         titleFontSize={'1.7rem'}
                         undelineBorderColor={theme.colors.color_2}
                         titleColor={theme.colors.color_1}
 
-                        headline="Design Rustic"
+                        headline="Design Divers"
                         headlineFont={theme.fonts.font_1}
                         headlineSize={'1.2rem'}
 
@@ -858,7 +724,7 @@ export const core = {
                         contentSize={'1.3rem'}
                         contentColor={theme.colors.color_1}
                         
-                        text="La noi te vei simți ca acasă"
+                        text="Fiecare apartament cu tematică diferită"
                         img1={'./img/Acasa/design.jpg'}
                         img2={'./img/Acasa/design.jpg'}
                         invertOrder={false}
@@ -889,22 +755,55 @@ export const core = {
                 ]
             },
             {
-                url: '/contact',
+                url: '/politica-cookies',
                 metadata: {
-                    title: 'Contact',
-                    desc: 'Page 3 description'
+                    title: 'Politica Cookies',
+                    desc: 'Politica Cookies'
                 },
                 components: [
                     <Omnitrix.Module_Layers_Widget_6
-                        title="Contact"
-                        bgImage={'./img/Acasa/gal_5.jpg'}
+                        title="Politica Cookies"
+                        bgImage={'./img/Acasa/new/favorites/IMG_0348.JPG'}
                     />,
-                    <Omnitrix.Module_Layers_Widget_11
-                        onlyMap={true}
-                        
-                    />
+                    <Omnitrix.Module_Layers_Widget_13
+                        core={
+                            <>
+                                <p>Document de informare a utilizatorilor despre prezența cookie-urilor pe site-ul web <strong>www.templateWebsite</strong> Informațiile prezentate în continuare au scopul de a aduce la cunoștința utilizatorului mai multe detalii despre plasarea, utilizarea și administrarea cookie-urilor utilizate de site-ul <strong>www.templateWebsite</strong>.</p>
+                                <br/>
+                                <p><strong>Ce este un cookie?</strong></p>
+                                <p>Un cookie este un fișier text care conține informații descărcate pe dispozitivul dumneavoastră atunci când vizitați (pentru prima dată) un site web. Acel cookie este trimis înapoi la fiecare vizită ulterioară către site-ul web de origine sau către alt site web care îl recunoaște. Cookie-urile sunt utile deoarece permit unui site web să recunoască un dispozitiv și vă oferă o experiență mai eficientă și personalizată.</p>
+                                <br/>
+                                <p><strong>Ce NU este un cookie?</strong></p>
+                                <p>Cookie-urile NU sunt viruși! Ele folosesc formate tip plain text. Nu sunt alcătuite din bucăți de cod, așa că nu pot fi executate și nici nu pot auto-rula. În consecință, nu se pot duplica sau replica pe alte rețele pentru a se rula sau replica din nou.</p>
+                                <br/>
+                                <p><strong>Ce tipuri de cookie sunt utilizate?</strong></p>
+                                <p><strong>www.templateWebsite</strong> folosește pe site-urile sale atât cookie-uri proprietare cât și cookie-uri terțe.</p>
+                                <p>Cookie-urile proprietare sunt cookie-uri utilizate de <strong>www.templateWebsite</strong> când vizitați unul dintre site-urile noastre web și sunt de următoarele tipuri: tehnice, de sesiune, persistente și funcționale:</p>
+                                <ul>
+                                <li>Cookie-urile tehnice sunt esențiale pentru funcționarea corectă a site-ului web. Aceste cookie-uri vă permit să navigați între diferite secțiuni ale site-ului web și să utilizați funcții specifice.</li>
+                                <li>Cookie-urile de sesiune sunt cookie-uri temporare care vă permit să navigați simplu și rapid pe site.</li>
+                                <li>Cookie-urile persistente sau ‘cookie-urile de urmărire’ durează mai multe sesiuni și rămân în browser o perioadă de timp după încheierea sesiunii (dacă nu le ștergeți).</li>
+                                <li>Cookie-urile funcționale monitorizează funcționarea corectă a site-ului web și îi permit acestuia să țină minte opțiunile dumneavoastră (de ex., limba, numele de utilizator sau regiunea). Acestea oferă funcții îmbunătățite și personale, care vă ajută să nu mai selectați opțiunile de fiecare dată când vizitați site-ul web.</li>
+                                </ul>
+                                <p>Cookie-urile terțe sunt module cookie care sunt utilizate de<strong> www.templateWebsite</strong> când vizitați site-ul nostru și sunt de următoarele tipuri:</p>
+                                <ul>
+                                <li>Cookie-urile de performanță (Google Analytics): colectează informații anonime și centralizate despre comportamentul dumneavoastră online (tipul de browser, adresa IP, sistemul de operare utilizat, numele domeniului site-ului pe care l-ați vizitat și momentul părăsirii site-ului, data și ora la care ați vizitat un site web, etc.) în scopuri statistice și pentru generarea profilurilor vizitatorilor.</li>
+                                <li>Cookie-urile pe care la folosim noi nu colectează date care să vă dezvăluie identitatea și, de aceea, nu vă putem identifica cu ajutorul lor. Site-ul nostru web poate conține link-uri către alte site-uri web care nu sunt deținute/administrate de <strong>www.templateWebsite</strong> (conținut terț, linkuri și plug-in-uri).<strong>www.templateWebsite</strong> nu își asumă responsabilitatea pentru practicile de confidențialitate aplicate de aceste site-uri web.</li>
+                                </ul>
+                                <p><strong>Cum respingeți cookie-urile?</strong></p>
+                                <p>Puteți să vă retrageți în orice moment acordul ștergând cookie-urile din browser.</p>
+                                <p>Aceste setări se găsesc de obicei în meniul ‘opțiuni’ sau ‘preferințe’ din browser. Pentru a înțelege aceste setări, ar putea fi utile următoarele linkuri (sau accesați opțiunea ‘Ajutor’ din <a href="https://www.mosaicresidence.ro/utilizare-cookies/" target="_blank" rel="noopener noreferrer">https://www.mosaicresidence.ro/utilizare-cookies/</a>browser pentru mai multe detalii):</p>
+                                <ul>
+                                <li><a href="https://support.microsoft.com/en-us/help/196955" target="_blank" rel="noopener noreferrer">Setările pentru cookie din Internet Explorer</a></li>
+                                <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer?redirectlocale=en-US&amp;redirectslug=Cookies" target="_blank" rel="noopener noreferrer">Setările pentru cookie din Firefox</a></li>
+                                <li><a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank" rel="noopener noreferrer">Setările pentru cookie din Chrome</a></li>
+                                <li><a href="https://support.apple.com/en-us/HT201265" target="_blank" rel="noopener noreferrer">Setările pentru cookie din Safari</a></li>
+                                </ul>
+                            </>
+                        }
+                    />,
                 ]
-            }
+            },
         ]
     }
 }

@@ -185,3 +185,119 @@
     font-size: 1.1rem;
 }
 }
+
+
+.footer_model_1-politica
+{
+    padding: 10px;
+    display: flex;
+}
+.footer_model_1-politica-left
+{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.9rem;
+}
+.footer_model_1-politica-left a
+{
+    color: black;
+    text-decoration: none;
+}
+.footer_model_1-politica-right 
+{
+    width: 60%;
+    display: flex;
+}
+.footer_model_1-politica-right-links
+{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer_model_1-politica-right-links-item
+{
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_model_1-politica-right-links-item a 
+{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.footer_model_1-politica-right-anpc
+{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_model_1-politica-right-anpc img 
+{
+    height: 40px;
+    object-fit: contain;
+    margin: 0px 10px;
+}
+/* Mobile legal footer */
+@media only screen and (max-width: 1100px){
+.footer_model_1-politica-right-links
+{
+    width: 30%;
+    text-align: center;
+}
+.footer_model_1-politica-right-anpc
+{
+    width: 70%;
+}
+}
+@media only screen and (max-width: 800px){
+.footer_model_1-politica
+{
+    flex-direction: column;
+}
+.footer_model_1-politica-left
+{
+    width: 100%;
+    padding: 10px;
+}
+.footer_model_1-politica-right
+{
+    width: 100%;
+}
+}
+@media only screen and (max-width: 450px){
+.footer_model_1-politica-left
+{
+    font-size: 0.7rem;
+}
+.footer_model_1-politica-right-links-item a
+{
+    font-size: 0.6rem;
+}
+.footer_model_1-politica-right-anpc img
+{
+    height: 30px;
+}
+}
+@media only screen and (max-width: 350px){
+.footer_model_1-politica-right
+{
+    flex-direction: column;
+}
+.footer_model_1-politica-right-links
+{
+    width: 100%;
+    padding: 10px;
+}
+.footer_model_1-politica-right-anpc
+{
+    width: 100%;
+}
+}

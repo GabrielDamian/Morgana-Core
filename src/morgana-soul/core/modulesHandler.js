@@ -18,6 +18,8 @@ import Module_Layers_Widget_8 from '../Modules/Layers/Widget_8/coreModule';
 import Module_Layers_Widget_9 from '../Modules/Layers/Widget_9/coreModule';
 import Module_Layers_Widget_10 from '../Modules/Layers/Widget_10/coreModule';
 import Module_Layers_Widget_11 from '../Modules/Layers/Widget_11/coreModule';
+import Module_Layers_Widget_12 from '../Modules/Layers/Widget_12/coreModule';
+import Module_Layers_Widget_13 from '../Modules/Layers/Widget_13/coreModule';
 
 //import wrappers - footer
 import Module_Wrappers_Footer_1 from '../Modules/Wrappers/Footer/Model_1/coreModule';
@@ -43,7 +45,9 @@ export const Omnitrix = {
     'Module_Layers_Widget_9': Module_Layers_Widget_9,
     'Module_Layers_Widget_10':Module_Layers_Widget_10,
     'Module_Layers_Widget_11':Module_Layers_Widget_11,
-    
+    'Module_Layers_Widget_12': Module_Layers_Widget_12,
+    'Module_Layers_Widget_13':Module_Layers_Widget_13,
+
     //wrappers - footer
     'Module_Wrappers_Footer_1':Module_Wrappers_Footer_1
 }

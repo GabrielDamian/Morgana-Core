@@ -6,6 +6,7 @@ import DefaultEmailIcon from './res/email.png';
 import DefaultPhoneIcon from './res/telephone.png';
 import DefaultPinIcon from './res/location.png';
 import hexToCSSFilters from '../../../../core/utils/hexToCSSFilters';
+import {Link} from "react-router-dom";
 export default function CoreModule({
     title,
     titleFont,
@@ -22,7 +23,15 @@ export default function CoreModule({
     items,
 })
 {
+    
+    const redirecToExternal = (to)=>{
+        window.location = to
+    }
+    const LegalLinks = [
+        ['Politica de utilizare cookies','/politica-cookies'],
+    ]
     return(
+        <>
         <div 
             className='footer_model_1'
             style={{
@@ -93,8 +102,34 @@ export default function CoreModule({
             </div>
             </div>
         </div>
+        {/* Politics Footer Section */}
+        <div className='footer_model_1-politica'>
+            <div className='footer_model_1-politica-left'>
+                <span>© 2022 Toate drepturile rezervate templateWebsite . Powered by <a href="https://magnus-team.com/">Magnus</a></span>
+            </div>
+            <div className='footer_model_1-politica-right'>
+                <div className='footer_model_1-politica-right-links'>
+                {
+                    LegalLinks.map((el)=>{
+                        return (
+                            <div className='footer_model_1-politica-right-links-item'>
+                                <Link to={el[1]}>{el[0]}</Link>
+                            </div>
+                        )
+                    })
+                }
+                </div>
+                <div className='footer_model_1-politica-right-anpc'>
+                    <img src='/SAL.png' onClick={()=>redirecToExternal('https://anpc.ro/ce-este-sal/')}/>
+                    <img src='/SOL.png' onClick={()=>redirecToExternal('https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO')}/>
+                </div>
+            </div>
+        </div>
+        </>
+        
     )
 }
+
 
 const FooterItem = ({imageIcon, text,title, iconColor, })=>{
     return(
